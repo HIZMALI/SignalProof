@@ -1,0 +1,84 @@
+name: Verify and deploy GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# No write token is exposed to dependency installation or build commands.
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      pages: read
+    env:
+      PLAYWRIGHT_BROWSERS_PATH: .playwright-browsers
+    steps:
+      - name: Check out source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Set up Node.js 22
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Install locked dependencies
+        run: npm ci
+      - name: Check dependency notices
+        run: node scripts/third-party-notices.mjs --check
+      - name: Typecheck
+        run: npm run typecheck
+      - name: Unit and integration tests
+        run: npm test
+      - name: Audit dependencies
+        run: npm audit
+      - name: Install deployment smoke-test browser
+        run: npx playwright install --with-deps chromium
+      - name: Build and test the Pages subpath
+        run: npm run test:pages
+      - name: Verify reproducibility and artifact contents
+        run: npm run verify:release-build
+      - name: Configure Pages metadata
+        uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5
+        # Pages must be enabled by the owner; this action must not enable it.
+      - name: Upload only the static application
+        uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b # v4
+        with:
+          path: dist
+          retention-days: 1
+      - name: Explain build failure
+        if: failure()
+        run: |
+          echo '### Release checks failed' >> "$GITHUB_STEP_SUMMARY"
+          echo 'Deployment is blocked. Inspect the failed named step above. Pages must be enabled with GitHub Actions as its source; no PAT is required.' >> "$GITHUB_STEP_SUMMARY"
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy the verified artifact
+        id: deployment
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4
+      - name: Explain deployment failure
+        if: failure()
+        run: |
+          echo '### Pages deployment failed' >> "$GITHUB_STEP_SUMMARY"
+          echo 'Check Pages settings, github-pages environment protection, and the deployment log. A successful build alone does not confirm a live site.' >> "$GITHUB_STEP_SUMMARY"

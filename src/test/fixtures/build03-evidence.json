@@ -1,0 +1,2152 @@
+{
+  "kind": "signalproof-evidence",
+  "version": 1,
+  "revision": 2,
+  "snapshots": [
+    {
+      "draft": {
+        "scenario": "closure",
+        "title": "North Gate closure",
+        "audience": "All students, faculty, staff, and campus visitors",
+        "body": "",
+        "action": "Use the East Gate on University Road. Allow 10 extra minutes for your journey.",
+        "location": "North Gate, Westbridge Campus",
+        "startTime": "2026-11-02T08:00",
+        "endTime": "2026-11-02T18:00",
+        "timeZone": "London (UTC+00:00)",
+        "alternativeLocation": "East Gate, University Road, 200 m east of the North Gate",
+        "accessibleRoute": "Use the step-free East Gate entrance and follow the signed, level path to the main quad. Contact Campus Operations for assistance.",
+        "contact": "Campus Operations · operations@westbridge.example",
+        "eventName": "",
+        "serviceName": "",
+        "workaround": "",
+        "reason": "Scheduled gate maintenance"
+      },
+      "options": {
+        "smsCutoff": false,
+        "pushPreset": "compact",
+        "pushOrder": "action-first"
+      },
+      "rulesetVersion": "source-1.0/channel-1.0/review-1.0",
+      "result": {
+        "findings": [
+          {
+            "id": "CORE-01",
+            "field": "title",
+            "title": "A clear announcement title",
+            "severity": "error",
+            "explanation": "The final announcement needs a title so readers can identify its purpose.",
+            "suggestion": "Add a specific title that identifies the change.",
+            "status": "passed"
+          },
+          {
+            "id": "CORE-02",
+            "field": "audience",
+            "title": "Target audience identified",
+            "severity": "error",
+            "explanation": "Readers need to know whether this announcement applies to them.",
+            "suggestion": "Name the affected students, staff, visitors, or service users.",
+            "status": "passed"
+          },
+          {
+            "id": "CORE-03",
+            "field": "action",
+            "title": "A concrete next step",
+            "severity": "error",
+            "explanation": "This scenario requires an explicit action in the final announcement.",
+            "suggestion": "Tell readers exactly what to do next, even if no action is needed.",
+            "status": "passed"
+          },
+          {
+            "id": "CORE-04",
+            "field": "startTime",
+            "title": "An exact effective time",
+            "severity": "error",
+            "explanation": "A valid date and time are required. Relative phrases such as “tomorrow” are ambiguous.",
+            "suggestion": "Set the exact date and time this change takes effect.",
+            "status": "passed"
+          },
+          {
+            "id": "CORE-05",
+            "field": "timeZone",
+            "title": "Time zone provided",
+            "severity": "error",
+            "explanation": "A clock time without a time zone can be interpreted differently by readers.",
+            "suggestion": "Specify the local time zone and UTC offset, for example London (UTC+00:00).",
+            "status": "passed"
+          },
+          {
+            "id": "CORE-06",
+            "field": "contact",
+            "title": "A reachable verification source",
+            "severity": "error",
+            "explanation": "Readers need a contact route or an update source. A name alone is insufficient.",
+            "suggestion": "Include an email address, phone number, or full https:// update URL.",
+            "status": "passed"
+          },
+          {
+            "id": "CORE-07",
+            "field": "endTime",
+            "title": "Time range is consistent",
+            "severity": "error",
+            "explanation": "If an end time is provided, it must be valid and later than the start, in the stated time zone.",
+            "suggestion": "Use a valid end date and time later than the start, or leave the end blank if unknown.",
+            "status": "passed"
+          },
+          {
+            "id": "CORE-08",
+            "field": "body",
+            "title": "Additional prose needs human review",
+            "severity": "warning",
+            "explanation": "The rules check structured facts. They cannot detect contradictions, misleading claims, or unclear language in additional context.",
+            "suggestion": "Review the context against every structured fact in the final preview, or remove redundant context.",
+            "status": "passed"
+          },
+          {
+            "id": "CORE-09",
+            "field": "title",
+            "title": "Structured facts included in final text",
+            "severity": "informational",
+            "explanation": "The final preview is regenerated from the checked fields on every edit. Free-text context is separately marked for review.",
+            "suggestion": "Copy or download the generated final announcement, then obtain the appropriate human approval.",
+            "status": "passed"
+          },
+          {
+            "id": "CLOSURE-01",
+            "field": "location",
+            "title": "Affected entrance identified",
+            "severity": "error",
+            "explanation": "A closure must identify the entrance or location that is unavailable.",
+            "suggestion": "Name the closed entrance and campus or building.",
+            "status": "passed"
+          },
+          {
+            "id": "CLOSURE-02",
+            "field": "alternativeLocation",
+            "title": "An alternative entrance",
+            "severity": "error",
+            "explanation": "People need an explicit alternative route while the entrance is closed.",
+            "suggestion": "Add the alternative entrance and directions to reach it.",
+            "status": "passed"
+          },
+          {
+            "id": "CLOSURE-03",
+            "field": "accessibleRoute",
+            "title": "Accessible route described",
+            "severity": "warning",
+            "explanation": "An alternative entrance is not automatically accessible. Readers may need step-free route information.",
+            "suggestion": "Describe the step-free route, or give a contact for access assistance. Verify it on site.",
+            "status": "passed"
+          },
+          {
+            "id": "CLOSURE-04",
+            "field": "endTime",
+            "title": "Closure end time provided",
+            "severity": "warning",
+            "explanation": "An end time helps readers plan their return. If it is unknown, the action should explain where to get updates.",
+            "suggestion": "Add the expected reopening date and time when confirmed.",
+            "status": "passed"
+          }
+        ],
+        "errorCount": 0,
+        "warningCount": 0,
+        "status": "checks-passed",
+        "passedCount": 13,
+        "completeness": 100,
+        "completedFields": 8,
+        "requiredFields": 8,
+        "finalAnnouncement": "North Gate closure\n\nFor: All students, faculty, staff, and campus visitors\n\nClosed entrance: North Gate, Westbridge Campus\nAlternative entrance: East Gate, University Road, 200 m east of the North Gate\nAccessible route: Use the step-free East Gate entrance and follow the signed, level path to the main quad. Contact Campus Operations for assistance.\nEffective from: 2 Nov 2026, 08:00 (London (UTC+00:00))\nEnds: 2 Nov 2026, 18:00 (London (UTC+00:00))\nReason: Scheduled gate maintenance\n\nWhat you need to do: Use the East Gate on University Road. Allow 10 extra minutes for your journey.\n\nContact / updates: Campus Operations · operations@westbridge.example"
+      },
+      "channels": {
+        "sms": {
+          "payload": {
+            "channel": "sms",
+            "title": { "text": "", "references": [] },
+            "body": {
+              "text": "North Gate closure\nAction: Use the East Gate on University Road. Allow 10 extra minutes for your journey.\nClosed: North Gate, Westbridge Campus\nUse instead: East Gate, University Road, 200 m east of the North Gate\nFrom: 2 Nov 2026, 08:00\nTime zone: London (UTC+00:00)\nFor: All students, faculty, staff, and campus visitors\nUntil: 2 Nov 2026, 18:00\nAccess: Use the step-free East Gate entrance and follow the signed, level path to the main quad. Contact Campus Operations for assistance.\nReason: Scheduled gate maintenance\nContact / updates: Campus Operations · operations@westbridge.example",
+              "references": [
+                {
+                  "field": "title",
+                  "sourceValue": "North Gate closure",
+                  "renderedValue": "North Gate closure",
+                  "start": 0,
+                  "end": 18
+                },
+                {
+                  "field": "action",
+                  "sourceValue": "Use the East Gate on University Road. Allow 10 extra minutes for your journey.",
+                  "renderedValue": "Use the East Gate on University Road. Allow 10 extra minutes for your journey.",
+                  "start": 27,
+                  "end": 105
+                },
+                {
+                  "field": "location",
+                  "sourceValue": "North Gate, Westbridge Campus",
+                  "renderedValue": "North Gate, Westbridge Campus",
+                  "start": 114,
+                  "end": 143
+                },
+                {
+                  "field": "alternativeLocation",
+                  "sourceValue": "East Gate, University Road, 200 m east of the North Gate",
+                  "renderedValue": "East Gate, University Road, 200 m east of the North Gate",
+                  "start": 157,
+                  "end": 213
+                },
+                {
+                  "field": "startTime",
+                  "sourceValue": "2026-11-02T08:00",
+                  "renderedValue": "2 Nov 2026, 08:00",
+                  "start": 220,
+                  "end": 237
+                },
+                {
+                  "field": "timeZone",
+                  "sourceValue": "London (UTC+00:00)",
+                  "renderedValue": "London (UTC+00:00)",
+                  "start": 249,
+                  "end": 267
+                },
+                {
+                  "field": "audience",
+                  "sourceValue": "All students, faculty, staff, and campus visitors",
+                  "renderedValue": "All students, faculty, staff, and campus visitors",
+                  "start": 273,
+                  "end": 322
+                },
+                {
+                  "field": "endTime",
+                  "sourceValue": "2026-11-02T18:00",
+                  "renderedValue": "2 Nov 2026, 18:00",
+                  "start": 330,
+                  "end": 347
+                },
+                {
+                  "field": "accessibleRoute",
+                  "sourceValue": "Use the step-free East Gate entrance and follow the signed, level path to the main quad. Contact Campus Operations for assistance.",
+                  "renderedValue": "Use the step-free East Gate entrance and follow the signed, level path to the main quad. Contact Campus Operations for assistance.",
+                  "start": 356,
+                  "end": 486
+                },
+                {
+                  "field": "reason",
+                  "sourceValue": "Scheduled gate maintenance",
+                  "renderedValue": "Scheduled gate maintenance",
+                  "start": 495,
+                  "end": 521
+                },
+                {
+                  "field": "contact",
+                  "sourceValue": "Campus Operations · operations@westbridge.example",
+                  "renderedValue": "Campus Operations · operations@westbridge.example",
+                  "start": 541,
+                  "end": 590
+                }
+              ]
+            }
+          },
+          "preview": {
+            "title": "",
+            "body": "North Gate closure\nAction: Use the East Gate on University Road. Allow 10 extra minutes for your journey.\nClosed: North Gate, Westbridge Campus\nUse instead: East Gate, University Road, 200 m east of the North Gate\nFrom: 2 Nov 2026, 08:00\nTime zone: London (UTC+00:00)\nFor: All students, faculty, staff, and campus visitors\nUntil: 2 Nov 2026, 18:00\nAccess: Use the step-free East Gate entrance and follow the signed, level path to the main quad. Contact Campus Operations for assistance.\nReason: Scheduled gate maintenance\nContact / updates: Campus Operations · operations@westbridge.example",
+            "titleVisibleEnd": 0,
+            "bodyVisibleEnd": 590,
+            "truncated": false
+          },
+          "metrics": {
+            "titleCharacters": 0,
+            "bodyCharacters": 590,
+            "sms": {
+              "encoding": "UCS-2 / UTF-16",
+              "characters": 590,
+              "units": 590,
+              "unitLabel": "UTF-16 code units",
+              "extensionCharacters": 0,
+              "nonGsmCharacters": ["·"],
+              "singleSegmentLimit": 70,
+              "multipartSegmentLimit": 67,
+              "segments": 9,
+              "segmentUnits": [67, 67, 67, 67, 67, 67, 67, 67, 54]
+            }
+          },
+          "coverage": [
+            {
+              "field": "title",
+              "status": "represented",
+              "collapsedVisibility": "visible"
+            },
+            {
+              "field": "audience",
+              "status": "represented",
+              "collapsedVisibility": "visible"
+            },
+            {
+              "field": "action",
+              "status": "represented",
+              "collapsedVisibility": "visible"
+            },
+            {
+              "field": "startTime",
+              "status": "represented",
+              "collapsedVisibility": "visible"
+            },
+            {
+              "field": "timeZone",
+              "status": "represented",
+              "collapsedVisibility": "visible"
+            },
+            {
+              "field": "contact",
+              "status": "represented",
+              "collapsedVisibility": "visible"
+            },
+            {
+              "field": "location",
+              "status": "represented",
+              "collapsedVisibility": "visible"
+            },
+            {
+              "field": "alternativeLocation",
+              "status": "represented",
+              "collapsedVisibility": "visible"
+            }
+          ],
+          "findings": [
+            {
+              "id": "CH-SMS-001-title",
+              "title": "Announcement title: represented",
+              "channel": "sms",
+              "severity": "error",
+              "status": "passed",
+              "explanation": "Announcement title must be represented by a complete, current semantic reference in the actual channel payload.",
+              "suggestion": "Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.",
+              "field": "title"
+            },
+            {
+              "id": "CH-SMS-001-audience",
+              "title": "Target audience: represented",
+              "channel": "sms",
+              "severity": "error",
+              "status": "passed",
+              "explanation": "Target audience must be represented by a complete, current semantic reference in the actual channel payload.",
+              "suggestion": "Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.",
+              "field": "audience"
+            },
+            {
+              "id": "CH-SMS-001-action",
+              "title": "Required action: represented",
+              "channel": "sms",
+              "severity": "error",
+              "status": "passed",
+              "explanation": "Required action must be represented by a complete, current semantic reference in the actual channel payload.",
+              "suggestion": "Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.",
+              "field": "action"
+            },
+            {
+              "id": "CH-SMS-001-startTime",
+              "title": "Effective time: represented",
+              "channel": "sms",
+              "severity": "error",
+              "status": "passed",
+              "explanation": "Effective time must be represented by a complete, current semantic reference in the actual channel payload.",
+              "suggestion": "Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.",
+              "field": "startTime"
+            },
+            {
+              "id": "CH-SMS-001-timeZone",
+              "title": "Time zone: represented",
+              "channel": "sms",
+              "severity": "error",
+              "status": "passed",
+              "explanation": "Time zone must be represented by a complete, current semantic reference in the actual channel payload.",
+              "suggestion": "Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.",
+              "field": "timeZone"
+            },
+            {
+              "id": "CH-SMS-001-contact",
+              "title": "Contact or verification source: represented",
+              "channel": "sms",
+              "severity": "error",
+              "status": "passed",
+              "explanation": "Contact or verification source must be represented by a complete, current semantic reference in the actual channel payload.",
+              "suggestion": "Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.",
+              "field": "contact"
+            },
+            {
+              "id": "CH-SMS-001-location",
+              "title": "Affected entrance / location: represented",
+              "channel": "sms",
+              "severity": "error",
+              "status": "passed",
+              "explanation": "Affected entrance / location must be represented by a complete, current semantic reference in the actual channel payload.",
+              "suggestion": "Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.",
+              "field": "location"
+            },
+            {
+              "id": "CH-SMS-001-alternativeLocation",
+              "title": "Alternative entrance: represented",
+              "channel": "sms",
+              "severity": "error",
+              "status": "passed",
+              "explanation": "Alternative entrance must be represented by a complete, current semantic reference in the actual channel payload.",
+              "suggestion": "Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.",
+              "field": "alternativeLocation"
+            },
+            {
+              "id": "CH-SMS-002",
+              "title": "No visible placeholders",
+              "channel": "sms",
+              "severity": "error",
+              "status": "passed",
+              "explanation": "Visible missing/invalid markers or TBD/TBC text need attention; placeholders never count as facts.",
+              "suggestion": "Replace placeholders in the source fields; do not hide the marker in the channel template."
+            },
+            {
+              "id": "CH-SMS-003",
+              "title": "Channel content is present",
+              "channel": "sms",
+              "severity": "error",
+              "status": "passed",
+              "explanation": "A channel needs message content; email requires a subject and push requires a title.",
+              "suggestion": "Add a source title and required details, then regenerate the channel.",
+              "field": "title"
+            },
+            {
+              "id": "CH-SMS-004",
+              "title": "Additional context is excluded",
+              "channel": "sms",
+              "severity": "informational",
+              "status": "passed",
+              "explanation": "Free-text additional context is intentionally excluded from all channel templates. It is not treated as a structured fact.",
+              "suggestion": "Review the source context yourself. Move essential details into the appropriate structured fields.",
+              "field": "body"
+            },
+            {
+              "id": "CH-SMS-005",
+              "title": "Multipart SMS",
+              "channel": "sms",
+              "severity": "warning",
+              "status": "failed",
+              "explanation": "The current text is estimated at 9 SMS segments. Multipart messages are normally reassembled; they are not inherently truncated.",
+              "suggestion": "Review length and cost with your provider. Keep the critical facts; use another channel if needed."
+            },
+            {
+              "id": "CH-SMS-006",
+              "title": "Long SMS review threshold",
+              "channel": "sms",
+              "severity": "warning",
+              "status": "failed",
+              "explanation": "This lab flags messages above 6 estimated segments for review. This is a product review threshold, not a carrier delivery limit.",
+              "suggestion": "Tighten the wording in the source or choose email for the full detail. Do not remove required facts."
+            },
+            {
+              "id": "CH-SMS-007",
+              "title": "Unicode encoding",
+              "channel": "sms",
+              "severity": "warning",
+              "status": "failed",
+              "explanation": "At least one non-GSM character switches the whole message to a Unicode estimate using UTF-16 code units. Emoji can consume two or more units.",
+              "suggestion": "Inspect non-GSM characters and choose simpler punctuation only when meaning is preserved. No automatic substitutions are made."
+            },
+            {
+              "id": "CH-SMS-008",
+              "title": "Artificial first-segment cutoff",
+              "channel": "sms",
+              "severity": "warning",
+              "status": "passed",
+              "explanation": "This is an intentional loss test, not normal multipart SMS behavior. Only the first transport segment is kept; later facts may be absent.",
+              "suggestion": "Disable the cutoff to restore the full multipart payload. Inspect every omitted fact before using any shortened text."
+            }
+          ],
+          "errorCount": 0,
+          "warningCount": 3,
+          "representedCount": 8,
+          "status": "review-needed",
+          "overallStatus": "review-needed"
+        },
+        "push": {
+          "payload": {
+            "channel": "push",
+            "title": {
+              "text": "North Gate closure",
+              "references": [
+                {
+                  "field": "title",
+                  "sourceValue": "North Gate closure",
+                  "renderedValue": "North Gate closure",
+                  "start": 0,
+                  "end": 18
+                }
+              ]
+            },
+            "body": {
+              "text": "Action: Use the East Gate on University Road. Allow 10 extra minutes for your journey.\nClosed: North Gate, Westbridge Campus\nUse instead: East Gate, University Road, 200 m east of the North Gate\nFrom: 2 Nov 2026, 08:00\nTime zone: London (UTC+00:00)\nFor: All students, faculty, staff, and campus visitors\nUntil: 2 Nov 2026, 18:00\nAccess: Use the step-free East Gate entrance and follow the signed, level path to the main quad. Contact Campus Operations for assistance.\nReason: Scheduled gate maintenance\nContact / updates: Campus Operations · operations@westbridge.example",
+              "references": [
+                {
+                  "field": "action",
+                  "sourceValue": "Use the East Gate on University Road. Allow 10 extra minutes for your journey.",
+                  "renderedValue": "Use the East Gate on University Road. Allow 10 extra minutes for your journey.",
+                  "start": 8,
+                  "end": 86
+                },
+                {
+                  "field": "location",
+                  "sourceValue": "North Gate, Westbridge Campus",
+                  "renderedValue": "North Gate, Westbridge Campus",
+                  "start": 95,
+                  "end": 124
+                },
+                {
+                  "field": "alternativeLocation",
+                  "sourceValue": "East Gate, University Road, 200 m east of the North Gate",
+                  "renderedValue": "East Gate, University Road, 200 m east of the North Gate",
+                  "start": 138,
+                  "end": 194
+                },
+                {
+                  "field": "startTime",
+                  "sourceValue": "2026-11-02T08:00",
+                  "renderedValue": "2 Nov 2026, 08:00",
+                  "start": 201,
+                  "end": 218
+                },
+                {
+                  "field": "timeZone",
+                  "sourceValue": "London (UTC+00:00)",
+                  "renderedValue": "London (UTC+00:00)",
+                  "start": 230,
+                  "end": 248
+                },
+                {
+                  "field": "audience",
+                  "sourceValue": "All students, faculty, staff, and campus visitors",
+                  "renderedValue": "All students, faculty, staff, and campus visitors",
+                  "start": 254,
+                  "end": 303
+                },
+                {
+                  "field": "endTime",
+                  "sourceValue": "2026-11-02T18:00",
+                  "renderedValue": "2 Nov 2026, 18:00",
+                  "start": 311,
+                  "end": 328
+                },
+                {
+                  "field": "accessibleRoute",
+                  "sourceValue": "Use the step-free East Gate entrance and follow the signed, level path to the main quad. Contact Campus Operations for assistance.",
+                  "renderedValue": "Use the step-free East Gate entrance and follow the signed, level path to the main quad. Contact Campus Operations for assistance.",
+                  "start": 337,
+                  "end": 467
+                },
+                {
+                  "field": "reason",
+                  "sourceValue": "Scheduled gate maintenance",
+                  "renderedValue": "Scheduled gate maintenance",
+                  "start": 476,
+                  "end": 502
+                },
+                {
+                  "field": "contact",
+                  "sourceValue": "Campus Operations · operations@westbridge.example",
+                  "renderedValue": "Campus Operations · operations@westbridge.example",
+                  "start": 522,
+                  "end": 571
+                }
+              ]
+            }
+          },
+          "preview": {
+            "title": "North Gate closure",
+            "body": "Action: Use the East Gate on University Road. Allow 10 extra minutes for your journey.\nClosed: North Gate, We…",
+            "titleVisibleEnd": 18,
+            "bodyVisibleEnd": 109,
+            "truncated": true
+          },
+          "metrics": { "titleCharacters": 18, "bodyCharacters": 571 },
+          "coverage": [
+            {
+              "field": "title",
+              "status": "represented",
+              "collapsedVisibility": "visible"
+            },
+            {
+              "field": "audience",
+              "status": "represented",
+              "collapsedVisibility": "hidden"
+            },
+            {
+              "field": "action",
+              "status": "represented",
+              "collapsedVisibility": "visible"
+            },
+            {
+              "field": "startTime",
+              "status": "represented",
+              "collapsedVisibility": "hidden"
+            },
+            {
+              "field": "timeZone",
+              "status": "represented",
+              "collapsedVisibility": "hidden"
+            },
+            {
+              "field": "contact",
+              "status": "represented",
+              "collapsedVisibility": "hidden"
+            },
+            {
+              "field": "location",
+              "status": "represented",
+              "collapsedVisibility": "partial"
+            },
+            {
+              "field": "alternativeLocation",
+              "status": "represented",
+              "collapsedVisibility": "hidden"
+            }
+          ],
+          "findings": [
+            {
+              "id": "CH-PUSH-001-title",
+              "title": "Announcement title: represented",
+              "channel": "push",
+              "severity": "error",
+              "status": "passed",
+              "explanation": "Announcement title must be represented by a complete, current semantic reference in the actual channel payload.",
+              "suggestion": "Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.",
+              "field": "title"
+            },
+            {
+              "id": "CH-PUSH-001-audience",
+              "title": "Target audience: represented",
+              "channel": "push",
+              "severity": "error",
+              "status": "passed",
+              "explanation": "Target audience must be represented by a complete, current semantic reference in the actual channel payload.",
+              "suggestion": "Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.",
+              "field": "audience"
+            },
+            {
+              "id": "CH-PUSH-001-action",
+              "title": "Required action: represented",
+              "channel": "push",
+              "severity": "error",
+              "status": "passed",
+              "explanation": "Required action must be represented by a complete, current semantic reference in the actual channel payload.",
+              "suggestion": "Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.",
+              "field": "action"
+            },
+            {
+              "id": "CH-PUSH-001-startTime",
+              "title": "Effective time: represented",
+              "channel": "push",
+              "severity": "error",
+              "status": "passed",
+              "explanation": "Effective time must be represented by a complete, current semantic reference in the actual channel payload.",
+              "suggestion": "Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.",
+              "field": "startTime"
+            },
+            {
+              "id": "CH-PUSH-001-timeZone",
+              "title": "Time zone: represented",
+              "channel": "push",
+              "severity": "error",
+              "status": "passed",
+              "explanation": "Time zone must be represented by a complete, current semantic reference in the actual channel payload.",
+              "suggestion": "Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.",
+              "field": "timeZone"
+            },
+            {
+              "id": "CH-PUSH-001-contact",
+              "title": "Contact or verification source: represented",
+              "channel": "push",
+              "severity": "error",
+              "status": "passed",
+              "explanation": "Contact or verification source must be represented by a complete, current semantic reference in the actual channel payload.",
+              "suggestion": "Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.",
+              "field": "contact"
+            },
+            {
+              "id": "CH-PUSH-001-location",
+              "title": "Affected entrance / location: represented",
+              "channel": "push",
+              "severity": "error",
+              "status": "passed",
+              "explanation": "Affected entrance / location must be represented by a complete, current semantic reference in the actual channel payload.",
+              "suggestion": "Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.",
+              "field": "location"
+            },
+            {
+              "id": "CH-PUSH-001-alternativeLocation",
+              "title": "Alternative entrance: represented",
+              "channel": "push",
+              "severity": "error",
+              "status": "passed",
+              "explanation": "Alternative entrance must be represented by a complete, current semantic reference in the actual channel payload.",
+              "suggestion": "Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.",
+              "field": "alternativeLocation"
+            },
+            {
+              "id": "CH-PUSH-002",
+              "title": "No visible placeholders",
+              "channel": "push",
+              "severity": "error",
+              "status": "passed",
+              "explanation": "Visible missing/invalid markers or TBD/TBC text need attention; placeholders never count as facts.",
+              "suggestion": "Replace placeholders in the source fields; do not hide the marker in the channel template."
+            },
+            {
+              "id": "CH-PUSH-003",
+              "title": "Channel content is present",
+              "channel": "push",
+              "severity": "error",
+              "status": "passed",
+              "explanation": "A channel needs message content; email requires a subject and push requires a title.",
+              "suggestion": "Add a source title and required details, then regenerate the channel.",
+              "field": "title"
+            },
+            {
+              "id": "CH-PUSH-004",
+              "title": "Additional context is excluded",
+              "channel": "push",
+              "severity": "informational",
+              "status": "passed",
+              "explanation": "Free-text additional context is intentionally excluded from all channel templates. It is not treated as a structured fact.",
+              "suggestion": "Review the source context yourself. Move essential details into the appropriate structured fields.",
+              "field": "body"
+            },
+            {
+              "id": "CH-PUSH-005",
+              "title": "Collapsed card hides content",
+              "channel": "push",
+              "severity": "warning",
+              "status": "failed",
+              "explanation": "The generic card uses a code-point budget to approximate visibility. Expanded payload content can be present even when it is not visible in the collapsed card.",
+              "suggestion": "Inspect the expanded content and lead with the most urgent information. Device, font, settings, and OS behavior vary."
+            },
+            {
+              "id": "CH-PUSH-006-title",
+              "title": "Announcement title visible in collapsed card",
+              "channel": "push",
+              "severity": "warning",
+              "status": "passed",
+              "explanation": "A complete fact in the full payload is not necessarily fully visible in the collapsed notification.",
+              "suggestion": "Try a roomier generic preset or change the leading content. Verify how people can access full details on real devices.",
+              "field": "title"
+            },
+            {
+              "id": "CH-PUSH-006-audience",
+              "title": "Target audience hidden in collapsed card",
+              "channel": "push",
+              "severity": "warning",
+              "status": "failed",
+              "explanation": "A complete fact in the full payload is not necessarily fully visible in the collapsed notification.",
+              "suggestion": "Try a roomier generic preset or change the leading content. Verify how people can access full details on real devices.",
+              "field": "audience"
+            },
+            {
+              "id": "CH-PUSH-006-action",
+              "title": "Required action visible in collapsed card",
+              "channel": "push",
+              "severity": "warning",
+              "status": "passed",
+              "explanation": "A complete fact in the full payload is not necessarily fully visible in the collapsed notification.",
+              "suggestion": "Try a roomier generic preset or change the leading content. Verify how people can access full details on real devices.",
+              "field": "action"
+            },
+            {
+              "id": "CH-PUSH-006-startTime",
+              "title": "Effective time hidden in collapsed card",
+              "channel": "push",
+              "severity": "warning",
+              "status": "failed",
+              "explanation": "A complete fact in the full payload is not necessarily fully visible in the collapsed notification.",
+              "suggestion": "Try a roomier generic preset or change the leading content. Verify how people can access full details on real devices.",
+              "field": "startTime"
+            },
+            {
+              "id": "CH-PUSH-006-timeZone",
+              "title": "Time zone hidden in collapsed card",
+              "channel": "push",
+              "severity": "warning",
+              "status": "failed",
+              "explanation": "A complete fact in the full payload is not necessarily fully visible in the collapsed notification.",
+              "suggestion": "Try a roomier generic preset or change the leading content. Verify how people can access full details on real devices.",
+              "field": "timeZone"
+            },
+            {
+              "id": "CH-PUSH-006-contact",
+              "title": "Contact or verification source hidden in collapsed card",
+              "channel": "push",
+              "severity": "warning",
+              "status": "failed",
+              "explanation": "A complete fact in the full payload is not necessarily fully visible in the collapsed notification.",
+              "suggestion": "Try a roomier generic preset or change the leading content. Verify how people can access full details on real devices.",
+              "field": "contact"
+            },
+            {
+              "id": "CH-PUSH-006-location",
+              "title": "Affected entrance / location partially visible in collapsed card",
+              "channel": "push",
+              "severity": "warning",
+              "status": "failed",
+              "explanation": "A complete fact in the full payload is not necessarily fully visible in the collapsed notification.",
+              "suggestion": "Try a roomier generic preset or change the leading content. Verify how people can access full details on real devices.",
+              "field": "location"
+            },
+            {
+              "id": "CH-PUSH-006-alternativeLocation",
+              "title": "Alternative entrance hidden in collapsed card",
+              "channel": "push",
+              "severity": "warning",
+              "status": "failed",
+              "explanation": "A complete fact in the full payload is not necessarily fully visible in the collapsed notification.",
+              "suggestion": "Try a roomier generic preset or change the leading content. Verify how people can access full details on real devices.",
+              "field": "alternativeLocation"
+            }
+          ],
+          "errorCount": 0,
+          "warningCount": 7,
+          "representedCount": 8,
+          "status": "review-needed",
+          "overallStatus": "review-needed"
+        },
+        "email": {
+          "payload": {
+            "channel": "email",
+            "title": {
+              "text": "North Gate closure",
+              "references": [
+                {
+                  "field": "title",
+                  "sourceValue": "North Gate closure",
+                  "renderedValue": "North Gate closure",
+                  "start": 0,
+                  "end": 18
+                }
+              ]
+            },
+            "body": {
+              "text": "Action: Use the East Gate on University Road. Allow 10 extra minutes for your journey.\nClosed: North Gate, Westbridge Campus\nUse instead: East Gate, University Road, 200 m east of the North Gate\nFrom: 2 Nov 2026, 08:00\nTime zone: London (UTC+00:00)\nFor: All students, faculty, staff, and campus visitors\nUntil: 2 Nov 2026, 18:00\nAccess: Use the step-free East Gate entrance and follow the signed, level path to the main quad. Contact Campus Operations for assistance.\nReason: Scheduled gate maintenance\nContact / updates: Campus Operations · operations@westbridge.example",
+              "references": [
+                {
+                  "field": "action",
+                  "sourceValue": "Use the East Gate on University Road. Allow 10 extra minutes for your journey.",
+                  "renderedValue": "Use the East Gate on University Road. Allow 10 extra minutes for your journey.",
+                  "start": 8,
+                  "end": 86
+                },
+                {
+                  "field": "location",
+                  "sourceValue": "North Gate, Westbridge Campus",
+                  "renderedValue": "North Gate, Westbridge Campus",
+                  "start": 95,
+                  "end": 124
+                },
+                {
+                  "field": "alternativeLocation",
+                  "sourceValue": "East Gate, University Road, 200 m east of the North Gate",
+                  "renderedValue": "East Gate, University Road, 200 m east of the North Gate",
+                  "start": 138,
+                  "end": 194
+                },
+                {
+                  "field": "startTime",
+                  "sourceValue": "2026-11-02T08:00",
+                  "renderedValue": "2 Nov 2026, 08:00",
+                  "start": 201,
+                  "end": 218
+                },
+                {
+                  "field": "timeZone",
+                  "sourceValue": "London (UTC+00:00)",
+                  "renderedValue": "London (UTC+00:00)",
+                  "start": 230,
+                  "end": 248
+                },
+                {
+                  "field": "audience",
+                  "sourceValue": "All students, faculty, staff, and campus visitors",
+                  "renderedValue": "All students, faculty, staff, and campus visitors",
+                  "start": 254,
+                  "end": 303
+                },
+                {
+                  "field": "endTime",
+                  "sourceValue": "2026-11-02T18:00",
+                  "renderedValue": "2 Nov 2026, 18:00",
+                  "start": 311,
+                  "end": 328
+                },
+                {
+                  "field": "accessibleRoute",
+                  "sourceValue": "Use the step-free East Gate entrance and follow the signed, level path to the main quad. Contact Campus Operations for assistance.",
+                  "renderedValue": "Use the step-free East Gate entrance and follow the signed, level path to the main quad. Contact Campus Operations for assistance.",
+                  "start": 337,
+                  "end": 467
+                },
+                {
+                  "field": "reason",
+                  "sourceValue": "Scheduled gate maintenance",
+                  "renderedValue": "Scheduled gate maintenance",
+                  "start": 476,
+                  "end": 502
+                },
+                {
+                  "field": "contact",
+                  "sourceValue": "Campus Operations · operations@westbridge.example",
+                  "renderedValue": "Campus Operations · operations@westbridge.example",
+                  "start": 522,
+                  "end": 571
+                }
+              ]
+            }
+          },
+          "preview": {
+            "title": "North Gate closure",
+            "body": "Action: Use the East Gate on University Road. Allow 10 extra minutes for your journey.\nClosed: North Gate, Westbridge C…",
+            "titleVisibleEnd": 18,
+            "bodyVisibleEnd": 119,
+            "truncated": true
+          },
+          "metrics": { "titleCharacters": 18, "bodyCharacters": 571 },
+          "coverage": [
+            {
+              "field": "title",
+              "status": "represented",
+              "collapsedVisibility": "visible"
+            },
+            {
+              "field": "audience",
+              "status": "represented",
+              "collapsedVisibility": "hidden"
+            },
+            {
+              "field": "action",
+              "status": "represented",
+              "collapsedVisibility": "visible"
+            },
+            {
+              "field": "startTime",
+              "status": "represented",
+              "collapsedVisibility": "hidden"
+            },
+            {
+              "field": "timeZone",
+              "status": "represented",
+              "collapsedVisibility": "hidden"
+            },
+            {
+              "field": "contact",
+              "status": "represented",
+              "collapsedVisibility": "hidden"
+            },
+            {
+              "field": "location",
+              "status": "represented",
+              "collapsedVisibility": "partial"
+            },
+            {
+              "field": "alternativeLocation",
+              "status": "represented",
+              "collapsedVisibility": "hidden"
+            }
+          ],
+          "findings": [
+            {
+              "id": "CH-EMAIL-001-title",
+              "title": "Announcement title: represented",
+              "channel": "email",
+              "severity": "error",
+              "status": "passed",
+              "explanation": "Announcement title must be represented by a complete, current semantic reference in the actual channel payload.",
+              "suggestion": "Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.",
+              "field": "title"
+            },
+            {
+              "id": "CH-EMAIL-001-audience",
+              "title": "Target audience: represented",
+              "channel": "email",
+              "severity": "error",
+              "status": "passed",
+              "explanation": "Target audience must be represented by a complete, current semantic reference in the actual channel payload.",
+              "suggestion": "Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.",
+              "field": "audience"
+            },
+            {
+              "id": "CH-EMAIL-001-action",
+              "title": "Required action: represented",
+              "channel": "email",
+              "severity": "error",
+              "status": "passed",
+              "explanation": "Required action must be represented by a complete, current semantic reference in the actual channel payload.",
+              "suggestion": "Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.",
+              "field": "action"
+            },
+            {
+              "id": "CH-EMAIL-001-startTime",
+              "title": "Effective time: represented",
+              "channel": "email",
+              "severity": "error",
+              "status": "passed",
+              "explanation": "Effective time must be represented by a complete, current semantic reference in the actual channel payload.",
+              "suggestion": "Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.",
+              "field": "startTime"
+            },
+            {
+              "id": "CH-EMAIL-001-timeZone",
+              "title": "Time zone: represented",
+              "channel": "email",
+              "severity": "error",
+              "status": "passed",
+              "explanation": "Time zone must be represented by a complete, current semantic reference in the actual channel payload.",
+              "suggestion": "Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.",
+              "field": "timeZone"
+            },
+            {
+              "id": "CH-EMAIL-001-contact",
+              "title": "Contact or verification source: represented",
+              "channel": "email",
+              "severity": "error",
+              "status": "passed",
+              "explanation": "Contact or verification source must be represented by a complete, current semantic reference in the actual channel payload.",
+              "suggestion": "Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.",
+              "field": "contact"
+            },
+            {
+              "id": "CH-EMAIL-001-location",
+              "title": "Affected entrance / location: represented",
+              "channel": "email",
+              "severity": "error",
+              "status": "passed",
+              "explanation": "Affected entrance / location must be represented by a complete, current semantic reference in the actual channel payload.",
+              "suggestion": "Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.",
+              "field": "location"
+            },
+            {
+              "id": "CH-EMAIL-001-alternativeLocation",
+              "title": "Alternative entrance: represented",
+              "channel": "email",
+              "severity": "error",
+              "status": "passed",
+              "explanation": "Alternative entrance must be represented by a complete, current semantic reference in the actual channel payload.",
+              "suggestion": "Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.",
+              "field": "alternativeLocation"
+            },
+            {
+              "id": "CH-EMAIL-002",
+              "title": "No visible placeholders",
+              "channel": "email",
+              "severity": "error",
+              "status": "passed",
+              "explanation": "Visible missing/invalid markers or TBD/TBC text need attention; placeholders never count as facts.",
+              "suggestion": "Replace placeholders in the source fields; do not hide the marker in the channel template."
+            },
+            {
+              "id": "CH-EMAIL-003",
+              "title": "Channel content is present",
+              "channel": "email",
+              "severity": "error",
+              "status": "passed",
+              "explanation": "A channel needs message content; email requires a subject and push requires a title.",
+              "suggestion": "Add a source title and required details, then regenerate the channel.",
+              "field": "title"
+            },
+            {
+              "id": "CH-EMAIL-004",
+              "title": "Additional context is excluded",
+              "channel": "email",
+              "severity": "informational",
+              "status": "passed",
+              "explanation": "Free-text additional context is intentionally excluded from all channel templates. It is not treated as a structured fact.",
+              "suggestion": "Review the source context yourself. Move essential details into the appropriate structured fields.",
+              "field": "body"
+            },
+            {
+              "id": "CH-EMAIL-005",
+              "title": "Inbox subject visibility",
+              "channel": "email",
+              "severity": "warning",
+              "status": "passed",
+              "explanation": "The generic inbox clips subjects after a 60-code-point budget. This is a simulation, not an email client limit.",
+              "suggestion": "Keep the subject concise and preserve the specific affected event, entrance, or service.",
+              "field": "title"
+            },
+            {
+              "id": "CH-EMAIL-006",
+              "title": "Inbox snippet is a sample",
+              "channel": "email",
+              "severity": "informational",
+              "status": "passed",
+              "explanation": "The snippet shows the first 120 code points of the body; the full body is preserved. Actual clients may select a different snippet.",
+              "suggestion": "Review the full body as well as the inbox view. No sender identity, receipt, or delivery status is verified."
+            }
+          ],
+          "errorCount": 0,
+          "warningCount": 0,
+          "representedCount": 8,
+          "status": "checks-passed",
+          "overallStatus": "checks-passed"
+        }
+      },
+      "requiredFacts": [
+        {
+          "field": "title",
+          "label": "Announcement title",
+          "value": "North Gate closure",
+          "state": "valid"
+        },
+        {
+          "field": "audience",
+          "label": "Target audience",
+          "value": "All students, faculty, staff, and campus visitors",
+          "state": "valid"
+        },
+        {
+          "field": "action",
+          "label": "Required action",
+          "value": "Use the East Gate on University Road. Allow 10 extra minutes for your journey.",
+          "state": "valid"
+        },
+        {
+          "field": "startTime",
+          "label": "Effective time",
+          "value": "2026-11-02T08:00",
+          "state": "valid"
+        },
+        {
+          "field": "timeZone",
+          "label": "Time zone",
+          "value": "London (UTC+00:00)",
+          "state": "valid"
+        },
+        {
+          "field": "contact",
+          "label": "Contact or verification source",
+          "value": "Campus Operations · operations@westbridge.example",
+          "state": "valid"
+        },
+        {
+          "field": "location",
+          "label": "Affected entrance / location",
+          "value": "North Gate, Westbridge Campus",
+          "state": "valid"
+        },
+        {
+          "field": "alternativeLocation",
+          "label": "Alternative entrance",
+          "value": "East Gate, University Road, 200 m east of the North Gate",
+          "state": "valid"
+        }
+      ],
+      "assumptions": {
+        "templateVersion": "2.0",
+        "smsSingle": [160, 70],
+        "smsMultipart": [153, 67],
+        "pairPreservation": true,
+        "pushBudget": { "title": 32, "body": 110 },
+        "emailBudget": { "title": 60, "body": 120 },
+        "clock": "local-device"
+      },
+      "schemaVersion": 1,
+      "id": "build03-corrected",
+      "timestamp": "2026-10-23T08:00:00.000Z",
+      "origin": "demo",
+      "contentKey": "{\"assumptions\":{\"clock\":\"local-device\",\"emailBudget\":{\"body\":120,\"title\":60},\"pairPreservation\":true,\"pushBudget\":{\"body\":110,\"title\":32},\"smsMultipart\":[153,67],\"smsSingle\":[160,70],\"templateVersion\":\"2.0\"},\"channels\":{\"email\":{\"coverage\":[{\"collapsedVisibility\":\"visible\",\"field\":\"title\",\"status\":\"represented\"},{\"collapsedVisibility\":\"hidden\",\"field\":\"audience\",\"status\":\"represented\"},{\"collapsedVisibility\":\"visible\",\"field\":\"action\",\"status\":\"represented\"},{\"collapsedVisibility\":\"hidden\",\"field\":\"startTime\",\"status\":\"represented\"},{\"collapsedVisibility\":\"hidden\",\"field\":\"timeZone\",\"status\":\"represented\"},{\"collapsedVisibility\":\"hidden\",\"field\":\"contact\",\"status\":\"represented\"},{\"collapsedVisibility\":\"partial\",\"field\":\"location\",\"status\":\"represented\"},{\"collapsedVisibility\":\"hidden\",\"field\":\"alternativeLocation\",\"status\":\"represented\"}],\"errorCount\":0,\"findings\":[{\"channel\":\"email\",\"explanation\":\"Announcement title must be represented by a complete, current semantic reference in the actual channel payload.\",\"field\":\"title\",\"id\":\"CH-EMAIL-001-title\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.\",\"title\":\"Announcement title: represented\"},{\"channel\":\"email\",\"explanation\":\"Target audience must be represented by a complete, current semantic reference in the actual channel payload.\",\"field\":\"audience\",\"id\":\"CH-EMAIL-001-audience\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.\",\"title\":\"Target audience: represented\"},{\"channel\":\"email\",\"explanation\":\"Required action must be represented by a complete, current semantic reference in the actual channel payload.\",\"field\":\"action\",\"id\":\"CH-EMAIL-001-action\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.\",\"title\":\"Required action: represented\"},{\"channel\":\"email\",\"explanation\":\"Effective time must be represented by a complete, current semantic reference in the actual channel payload.\",\"field\":\"startTime\",\"id\":\"CH-EMAIL-001-startTime\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.\",\"title\":\"Effective time: represented\"},{\"channel\":\"email\",\"explanation\":\"Time zone must be represented by a complete, current semantic reference in the actual channel payload.\",\"field\":\"timeZone\",\"id\":\"CH-EMAIL-001-timeZone\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.\",\"title\":\"Time zone: represented\"},{\"channel\":\"email\",\"explanation\":\"Contact or verification source must be represented by a complete, current semantic reference in the actual channel payload.\",\"field\":\"contact\",\"id\":\"CH-EMAIL-001-contact\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.\",\"title\":\"Contact or verification source: represented\"},{\"channel\":\"email\",\"explanation\":\"Affected entrance / location must be represented by a complete, current semantic reference in the actual channel payload.\",\"field\":\"location\",\"id\":\"CH-EMAIL-001-location\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.\",\"title\":\"Affected entrance / location: represented\"},{\"channel\":\"email\",\"explanation\":\"Alternative entrance must be represented by a complete, current semantic reference in the actual channel payload.\",\"field\":\"alternativeLocation\",\"id\":\"CH-EMAIL-001-alternativeLocation\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.\",\"title\":\"Alternative entrance: represented\"},{\"channel\":\"email\",\"explanation\":\"Visible missing/invalid markers or TBD/TBC text need attention; placeholders never count as facts.\",\"id\":\"CH-EMAIL-002\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Replace placeholders in the source fields; do not hide the marker in the channel template.\",\"title\":\"No visible placeholders\"},{\"channel\":\"email\",\"explanation\":\"A channel needs message content; email requires a subject and push requires a title.\",\"field\":\"title\",\"id\":\"CH-EMAIL-003\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Add a source title and required details, then regenerate the channel.\",\"title\":\"Channel content is present\"},{\"channel\":\"email\",\"explanation\":\"Free-text additional context is intentionally excluded from all channel templates. It is not treated as a structured fact.\",\"field\":\"body\",\"id\":\"CH-EMAIL-004\",\"severity\":\"informational\",\"status\":\"passed\",\"suggestion\":\"Review the source context yourself. Move essential details into the appropriate structured fields.\",\"title\":\"Additional context is excluded\"},{\"channel\":\"email\",\"explanation\":\"The generic inbox clips subjects after a 60-code-point budget. This is a simulation, not an email client limit.\",\"field\":\"title\",\"id\":\"CH-EMAIL-005\",\"severity\":\"warning\",\"status\":\"passed\",\"suggestion\":\"Keep the subject concise and preserve the specific affected event, entrance, or service.\",\"title\":\"Inbox subject visibility\"},{\"channel\":\"email\",\"explanation\":\"The snippet shows the first 120 code points of the body; the full body is preserved. Actual clients may select a different snippet.\",\"id\":\"CH-EMAIL-006\",\"severity\":\"informational\",\"status\":\"passed\",\"suggestion\":\"Review the full body as well as the inbox view. No sender identity, receipt, or delivery status is verified.\",\"title\":\"Inbox snippet is a sample\"}],\"metrics\":{\"bodyCharacters\":571,\"titleCharacters\":18},\"overallStatus\":\"checks-passed\",\"payload\":{\"body\":{\"references\":[{\"end\":86,\"field\":\"action\",\"renderedValue\":\"Use the East Gate on University Road. Allow 10 extra minutes for your journey.\",\"sourceValue\":\"Use the East Gate on University Road. Allow 10 extra minutes for your journey.\",\"start\":8},{\"end\":124,\"field\":\"location\",\"renderedValue\":\"North Gate, Westbridge Campus\",\"sourceValue\":\"North Gate, Westbridge Campus\",\"start\":95},{\"end\":194,\"field\":\"alternativeLocation\",\"renderedValue\":\"East Gate, University Road, 200 m east of the North Gate\",\"sourceValue\":\"East Gate, University Road, 200 m east of the North Gate\",\"start\":138},{\"end\":218,\"field\":\"startTime\",\"renderedValue\":\"2 Nov 2026, 08:00\",\"sourceValue\":\"2026-11-02T08:00\",\"start\":201},{\"end\":248,\"field\":\"timeZone\",\"renderedValue\":\"London (UTC+00:00)\",\"sourceValue\":\"London (UTC+00:00)\",\"start\":230},{\"end\":303,\"field\":\"audience\",\"renderedValue\":\"All students, faculty, staff, and campus visitors\",\"sourceValue\":\"All students, faculty, staff, and campus visitors\",\"start\":254},{\"end\":328,\"field\":\"endTime\",\"renderedValue\":\"2 Nov 2026, 18:00\",\"sourceValue\":\"2026-11-02T18:00\",\"start\":311},{\"end\":467,\"field\":\"accessibleRoute\",\"renderedValue\":\"Use the step-free East Gate entrance and follow the signed, level path to the main quad. Contact Campus Operations for assistance.\",\"sourceValue\":\"Use the step-free East Gate entrance and follow the signed, level path to the main quad. Contact Campus Operations for assistance.\",\"start\":337},{\"end\":502,\"field\":\"reason\",\"renderedValue\":\"Scheduled gate maintenance\",\"sourceValue\":\"Scheduled gate maintenance\",\"start\":476},{\"end\":571,\"field\":\"contact\",\"renderedValue\":\"Campus Operations · operations@westbridge.example\",\"sourceValue\":\"Campus Operations · operations@westbridge.example\",\"start\":522}],\"text\":\"Action: Use the East Gate on University Road. Allow 10 extra minutes for your journey.\\nClosed: North Gate, Westbridge Campus\\nUse instead: East Gate, University Road, 200 m east of the North Gate\\nFrom: 2 Nov 2026, 08:00\\nTime zone: London (UTC+00:00)\\nFor: All students, faculty, staff, and campus visitors\\nUntil: 2 Nov 2026, 18:00\\nAccess: Use the step-free East Gate entrance and follow the signed, level path to the main quad. Contact Campus Operations for assistance.\\nReason: Scheduled gate maintenance\\nContact / updates: Campus Operations · operations@westbridge.example\"},\"channel\":\"email\",\"title\":{\"references\":[{\"end\":18,\"field\":\"title\",\"renderedValue\":\"North Gate closure\",\"sourceValue\":\"North Gate closure\",\"start\":0}],\"text\":\"North Gate closure\"}},\"preview\":{\"body\":\"Action: Use the East Gate on University Road. Allow 10 extra minutes for your journey.\\nClosed: North Gate, Westbridge C…\",\"bodyVisibleEnd\":119,\"title\":\"North Gate closure\",\"titleVisibleEnd\":18,\"truncated\":true},\"representedCount\":8,\"status\":\"checks-passed\",\"warningCount\":0},\"push\":{\"coverage\":[{\"collapsedVisibility\":\"visible\",\"field\":\"title\",\"status\":\"represented\"},{\"collapsedVisibility\":\"hidden\",\"field\":\"audience\",\"status\":\"represented\"},{\"collapsedVisibility\":\"visible\",\"field\":\"action\",\"status\":\"represented\"},{\"collapsedVisibility\":\"hidden\",\"field\":\"startTime\",\"status\":\"represented\"},{\"collapsedVisibility\":\"hidden\",\"field\":\"timeZone\",\"status\":\"represented\"},{\"collapsedVisibility\":\"hidden\",\"field\":\"contact\",\"status\":\"represented\"},{\"collapsedVisibility\":\"partial\",\"field\":\"location\",\"status\":\"represented\"},{\"collapsedVisibility\":\"hidden\",\"field\":\"alternativeLocation\",\"status\":\"represented\"}],\"errorCount\":0,\"findings\":[{\"channel\":\"push\",\"explanation\":\"Announcement title must be represented by a complete, current semantic reference in the actual channel payload.\",\"field\":\"title\",\"id\":\"CH-PUSH-001-title\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.\",\"title\":\"Announcement title: represented\"},{\"channel\":\"push\",\"explanation\":\"Target audience must be represented by a complete, current semantic reference in the actual channel payload.\",\"field\":\"audience\",\"id\":\"CH-PUSH-001-audience\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.\",\"title\":\"Target audience: represented\"},{\"channel\":\"push\",\"explanation\":\"Required action must be represented by a complete, current semantic reference in the actual channel payload.\",\"field\":\"action\",\"id\":\"CH-PUSH-001-action\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.\",\"title\":\"Required action: represented\"},{\"channel\":\"push\",\"explanation\":\"Effective time must be represented by a complete, current semantic reference in the actual channel payload.\",\"field\":\"startTime\",\"id\":\"CH-PUSH-001-startTime\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.\",\"title\":\"Effective time: represented\"},{\"channel\":\"push\",\"explanation\":\"Time zone must be represented by a complete, current semantic reference in the actual channel payload.\",\"field\":\"timeZone\",\"id\":\"CH-PUSH-001-timeZone\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.\",\"title\":\"Time zone: represented\"},{\"channel\":\"push\",\"explanation\":\"Contact or verification source must be represented by a complete, current semantic reference in the actual channel payload.\",\"field\":\"contact\",\"id\":\"CH-PUSH-001-contact\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.\",\"title\":\"Contact or verification source: represented\"},{\"channel\":\"push\",\"explanation\":\"Affected entrance / location must be represented by a complete, current semantic reference in the actual channel payload.\",\"field\":\"location\",\"id\":\"CH-PUSH-001-location\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.\",\"title\":\"Affected entrance / location: represented\"},{\"channel\":\"push\",\"explanation\":\"Alternative entrance must be represented by a complete, current semantic reference in the actual channel payload.\",\"field\":\"alternativeLocation\",\"id\":\"CH-PUSH-001-alternativeLocation\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.\",\"title\":\"Alternative entrance: represented\"},{\"channel\":\"push\",\"explanation\":\"Visible missing/invalid markers or TBD/TBC text need attention; placeholders never count as facts.\",\"id\":\"CH-PUSH-002\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Replace placeholders in the source fields; do not hide the marker in the channel template.\",\"title\":\"No visible placeholders\"},{\"channel\":\"push\",\"explanation\":\"A channel needs message content; email requires a subject and push requires a title.\",\"field\":\"title\",\"id\":\"CH-PUSH-003\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Add a source title and required details, then regenerate the channel.\",\"title\":\"Channel content is present\"},{\"channel\":\"push\",\"explanation\":\"Free-text additional context is intentionally excluded from all channel templates. It is not treated as a structured fact.\",\"field\":\"body\",\"id\":\"CH-PUSH-004\",\"severity\":\"informational\",\"status\":\"passed\",\"suggestion\":\"Review the source context yourself. Move essential details into the appropriate structured fields.\",\"title\":\"Additional context is excluded\"},{\"channel\":\"push\",\"explanation\":\"The generic card uses a code-point budget to approximate visibility. Expanded payload content can be present even when it is not visible in the collapsed card.\",\"id\":\"CH-PUSH-005\",\"severity\":\"warning\",\"status\":\"failed\",\"suggestion\":\"Inspect the expanded content and lead with the most urgent information. Device, font, settings, and OS behavior vary.\",\"title\":\"Collapsed card hides content\"},{\"channel\":\"push\",\"explanation\":\"A complete fact in the full payload is not necessarily fully visible in the collapsed notification.\",\"field\":\"title\",\"id\":\"CH-PUSH-006-title\",\"severity\":\"warning\",\"status\":\"passed\",\"suggestion\":\"Try a roomier generic preset or change the leading content. Verify how people can access full details on real devices.\",\"title\":\"Announcement title visible in collapsed card\"},{\"channel\":\"push\",\"explanation\":\"A complete fact in the full payload is not necessarily fully visible in the collapsed notification.\",\"field\":\"audience\",\"id\":\"CH-PUSH-006-audience\",\"severity\":\"warning\",\"status\":\"failed\",\"suggestion\":\"Try a roomier generic preset or change the leading content. Verify how people can access full details on real devices.\",\"title\":\"Target audience hidden in collapsed card\"},{\"channel\":\"push\",\"explanation\":\"A complete fact in the full payload is not necessarily fully visible in the collapsed notification.\",\"field\":\"action\",\"id\":\"CH-PUSH-006-action\",\"severity\":\"warning\",\"status\":\"passed\",\"suggestion\":\"Try a roomier generic preset or change the leading content. Verify how people can access full details on real devices.\",\"title\":\"Required action visible in collapsed card\"},{\"channel\":\"push\",\"explanation\":\"A complete fact in the full payload is not necessarily fully visible in the collapsed notification.\",\"field\":\"startTime\",\"id\":\"CH-PUSH-006-startTime\",\"severity\":\"warning\",\"status\":\"failed\",\"suggestion\":\"Try a roomier generic preset or change the leading content. Verify how people can access full details on real devices.\",\"title\":\"Effective time hidden in collapsed card\"},{\"channel\":\"push\",\"explanation\":\"A complete fact in the full payload is not necessarily fully visible in the collapsed notification.\",\"field\":\"timeZone\",\"id\":\"CH-PUSH-006-timeZone\",\"severity\":\"warning\",\"status\":\"failed\",\"suggestion\":\"Try a roomier generic preset or change the leading content. Verify how people can access full details on real devices.\",\"title\":\"Time zone hidden in collapsed card\"},{\"channel\":\"push\",\"explanation\":\"A complete fact in the full payload is not necessarily fully visible in the collapsed notification.\",\"field\":\"contact\",\"id\":\"CH-PUSH-006-contact\",\"severity\":\"warning\",\"status\":\"failed\",\"suggestion\":\"Try a roomier generic preset or change the leading content. Verify how people can access full details on real devices.\",\"title\":\"Contact or verification source hidden in collapsed card\"},{\"channel\":\"push\",\"explanation\":\"A complete fact in the full payload is not necessarily fully visible in the collapsed notification.\",\"field\":\"location\",\"id\":\"CH-PUSH-006-location\",\"severity\":\"warning\",\"status\":\"failed\",\"suggestion\":\"Try a roomier generic preset or change the leading content. Verify how people can access full details on real devices.\",\"title\":\"Affected entrance / location partially visible in collapsed card\"},{\"channel\":\"push\",\"explanation\":\"A complete fact in the full payload is not necessarily fully visible in the collapsed notification.\",\"field\":\"alternativeLocation\",\"id\":\"CH-PUSH-006-alternativeLocation\",\"severity\":\"warning\",\"status\":\"failed\",\"suggestion\":\"Try a roomier generic preset or change the leading content. Verify how people can access full details on real devices.\",\"title\":\"Alternative entrance hidden in collapsed card\"}],\"metrics\":{\"bodyCharacters\":571,\"titleCharacters\":18},\"overallStatus\":\"review-needed\",\"payload\":{\"body\":{\"references\":[{\"end\":86,\"field\":\"action\",\"renderedValue\":\"Use the East Gate on University Road. Allow 10 extra minutes for your journey.\",\"sourceValue\":\"Use the East Gate on University Road. Allow 10 extra minutes for your journey.\",\"start\":8},{\"end\":124,\"field\":\"location\",\"renderedValue\":\"North Gate, Westbridge Campus\",\"sourceValue\":\"North Gate, Westbridge Campus\",\"start\":95},{\"end\":194,\"field\":\"alternativeLocation\",\"renderedValue\":\"East Gate, University Road, 200 m east of the North Gate\",\"sourceValue\":\"East Gate, University Road, 200 m east of the North Gate\",\"start\":138},{\"end\":218,\"field\":\"startTime\",\"renderedValue\":\"2 Nov 2026, 08:00\",\"sourceValue\":\"2026-11-02T08:00\",\"start\":201},{\"end\":248,\"field\":\"timeZone\",\"renderedValue\":\"London (UTC+00:00)\",\"sourceValue\":\"London (UTC+00:00)\",\"start\":230},{\"end\":303,\"field\":\"audience\",\"renderedValue\":\"All students, faculty, staff, and campus visitors\",\"sourceValue\":\"All students, faculty, staff, and campus visitors\",\"start\":254},{\"end\":328,\"field\":\"endTime\",\"renderedValue\":\"2 Nov 2026, 18:00\",\"sourceValue\":\"2026-11-02T18:00\",\"start\":311},{\"end\":467,\"field\":\"accessibleRoute\",\"renderedValue\":\"Use the step-free East Gate entrance and follow the signed, level path to the main quad. Contact Campus Operations for assistance.\",\"sourceValue\":\"Use the step-free East Gate entrance and follow the signed, level path to the main quad. Contact Campus Operations for assistance.\",\"start\":337},{\"end\":502,\"field\":\"reason\",\"renderedValue\":\"Scheduled gate maintenance\",\"sourceValue\":\"Scheduled gate maintenance\",\"start\":476},{\"end\":571,\"field\":\"contact\",\"renderedValue\":\"Campus Operations · operations@westbridge.example\",\"sourceValue\":\"Campus Operations · operations@westbridge.example\",\"start\":522}],\"text\":\"Action: Use the East Gate on University Road. Allow 10 extra minutes for your journey.\\nClosed: North Gate, Westbridge Campus\\nUse instead: East Gate, University Road, 200 m east of the North Gate\\nFrom: 2 Nov 2026, 08:00\\nTime zone: London (UTC+00:00)\\nFor: All students, faculty, staff, and campus visitors\\nUntil: 2 Nov 2026, 18:00\\nAccess: Use the step-free East Gate entrance and follow the signed, level path to the main quad. Contact Campus Operations for assistance.\\nReason: Scheduled gate maintenance\\nContact / updates: Campus Operations · operations@westbridge.example\"},\"channel\":\"push\",\"title\":{\"references\":[{\"end\":18,\"field\":\"title\",\"renderedValue\":\"North Gate closure\",\"sourceValue\":\"North Gate closure\",\"start\":0}],\"text\":\"North Gate closure\"}},\"preview\":{\"body\":\"Action: Use the East Gate on University Road. Allow 10 extra minutes for your journey.\\nClosed: North Gate, We…\",\"bodyVisibleEnd\":109,\"title\":\"North Gate closure\",\"titleVisibleEnd\":18,\"truncated\":true},\"representedCount\":8,\"status\":\"review-needed\",\"warningCount\":7},\"sms\":{\"coverage\":[{\"collapsedVisibility\":\"visible\",\"field\":\"title\",\"status\":\"represented\"},{\"collapsedVisibility\":\"visible\",\"field\":\"audience\",\"status\":\"represented\"},{\"collapsedVisibility\":\"visible\",\"field\":\"action\",\"status\":\"represented\"},{\"collapsedVisibility\":\"visible\",\"field\":\"startTime\",\"status\":\"represented\"},{\"collapsedVisibility\":\"visible\",\"field\":\"timeZone\",\"status\":\"represented\"},{\"collapsedVisibility\":\"visible\",\"field\":\"contact\",\"status\":\"represented\"},{\"collapsedVisibility\":\"visible\",\"field\":\"location\",\"status\":\"represented\"},{\"collapsedVisibility\":\"visible\",\"field\":\"alternativeLocation\",\"status\":\"represented\"}],\"errorCount\":0,\"findings\":[{\"channel\":\"sms\",\"explanation\":\"Announcement title must be represented by a complete, current semantic reference in the actual channel payload.\",\"field\":\"title\",\"id\":\"CH-SMS-001-title\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.\",\"title\":\"Announcement title: represented\"},{\"channel\":\"sms\",\"explanation\":\"Target audience must be represented by a complete, current semantic reference in the actual channel payload.\",\"field\":\"audience\",\"id\":\"CH-SMS-001-audience\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.\",\"title\":\"Target audience: represented\"},{\"channel\":\"sms\",\"explanation\":\"Required action must be represented by a complete, current semantic reference in the actual channel payload.\",\"field\":\"action\",\"id\":\"CH-SMS-001-action\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.\",\"title\":\"Required action: represented\"},{\"channel\":\"sms\",\"explanation\":\"Effective time must be represented by a complete, current semantic reference in the actual channel payload.\",\"field\":\"startTime\",\"id\":\"CH-SMS-001-startTime\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.\",\"title\":\"Effective time: represented\"},{\"channel\":\"sms\",\"explanation\":\"Time zone must be represented by a complete, current semantic reference in the actual channel payload.\",\"field\":\"timeZone\",\"id\":\"CH-SMS-001-timeZone\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.\",\"title\":\"Time zone: represented\"},{\"channel\":\"sms\",\"explanation\":\"Contact or verification source must be represented by a complete, current semantic reference in the actual channel payload.\",\"field\":\"contact\",\"id\":\"CH-SMS-001-contact\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.\",\"title\":\"Contact or verification source: represented\"},{\"channel\":\"sms\",\"explanation\":\"Affected entrance / location must be represented by a complete, current semantic reference in the actual channel payload.\",\"field\":\"location\",\"id\":\"CH-SMS-001-location\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.\",\"title\":\"Affected entrance / location: represented\"},{\"channel\":\"sms\",\"explanation\":\"Alternative entrance must be represented by a complete, current semantic reference in the actual channel payload.\",\"field\":\"alternativeLocation\",\"id\":\"CH-SMS-001-alternativeLocation\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.\",\"title\":\"Alternative entrance: represented\"},{\"channel\":\"sms\",\"explanation\":\"Visible missing/invalid markers or TBD/TBC text need attention; placeholders never count as facts.\",\"id\":\"CH-SMS-002\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Replace placeholders in the source fields; do not hide the marker in the channel template.\",\"title\":\"No visible placeholders\"},{\"channel\":\"sms\",\"explanation\":\"A channel needs message content; email requires a subject and push requires a title.\",\"field\":\"title\",\"id\":\"CH-SMS-003\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Add a source title and required details, then regenerate the channel.\",\"title\":\"Channel content is present\"},{\"channel\":\"sms\",\"explanation\":\"Free-text additional context is intentionally excluded from all channel templates. It is not treated as a structured fact.\",\"field\":\"body\",\"id\":\"CH-SMS-004\",\"severity\":\"informational\",\"status\":\"passed\",\"suggestion\":\"Review the source context yourself. Move essential details into the appropriate structured fields.\",\"title\":\"Additional context is excluded\"},{\"channel\":\"sms\",\"explanation\":\"The current text is estimated at 9 SMS segments. Multipart messages are normally reassembled; they are not inherently truncated.\",\"id\":\"CH-SMS-005\",\"severity\":\"warning\",\"status\":\"failed\",\"suggestion\":\"Review length and cost with your provider. Keep the critical facts; use another channel if needed.\",\"title\":\"Multipart SMS\"},{\"channel\":\"sms\",\"explanation\":\"This lab flags messages above 6 estimated segments for review. This is a product review threshold, not a carrier delivery limit.\",\"id\":\"CH-SMS-006\",\"severity\":\"warning\",\"status\":\"failed\",\"suggestion\":\"Tighten the wording in the source or choose email for the full detail. Do not remove required facts.\",\"title\":\"Long SMS review threshold\"},{\"channel\":\"sms\",\"explanation\":\"At least one non-GSM character switches the whole message to a Unicode estimate using UTF-16 code units. Emoji can consume two or more units.\",\"id\":\"CH-SMS-007\",\"severity\":\"warning\",\"status\":\"failed\",\"suggestion\":\"Inspect non-GSM characters and choose simpler punctuation only when meaning is preserved. No automatic substitutions are made.\",\"title\":\"Unicode encoding\"},{\"channel\":\"sms\",\"explanation\":\"This is an intentional loss test, not normal multipart SMS behavior. Only the first transport segment is kept; later facts may be absent.\",\"id\":\"CH-SMS-008\",\"severity\":\"warning\",\"status\":\"passed\",\"suggestion\":\"Disable the cutoff to restore the full multipart payload. Inspect every omitted fact before using any shortened text.\",\"title\":\"Artificial first-segment cutoff\"}],\"metrics\":{\"bodyCharacters\":590,\"sms\":{\"characters\":590,\"encoding\":\"UCS-2 / UTF-16\",\"extensionCharacters\":0,\"multipartSegmentLimit\":67,\"nonGsmCharacters\":[\"·\"],\"segmentUnits\":[67,67,67,67,67,67,67,67,54],\"segments\":9,\"singleSegmentLimit\":70,\"unitLabel\":\"UTF-16 code units\",\"units\":590},\"titleCharacters\":0},\"overallStatus\":\"review-needed\",\"payload\":{\"body\":{\"references\":[{\"end\":18,\"field\":\"title\",\"renderedValue\":\"North Gate closure\",\"sourceValue\":\"North Gate closure\",\"start\":0},{\"end\":105,\"field\":\"action\",\"renderedValue\":\"Use the East Gate on University Road. Allow 10 extra minutes for your journey.\",\"sourceValue\":\"Use the East Gate on University Road. Allow 10 extra minutes for your journey.\",\"start\":27},{\"end\":143,\"field\":\"location\",\"renderedValue\":\"North Gate, Westbridge Campus\",\"sourceValue\":\"North Gate, Westbridge Campus\",\"start\":114},{\"end\":213,\"field\":\"alternativeLocation\",\"renderedValue\":\"East Gate, University Road, 200 m east of the North Gate\",\"sourceValue\":\"East Gate, University Road, 200 m east of the North Gate\",\"start\":157},{\"end\":237,\"field\":\"startTime\",\"renderedValue\":\"2 Nov 2026, 08:00\",\"sourceValue\":\"2026-11-02T08:00\",\"start\":220},{\"end\":267,\"field\":\"timeZone\",\"renderedValue\":\"London (UTC+00:00)\",\"sourceValue\":\"London (UTC+00:00)\",\"start\":249},{\"end\":322,\"field\":\"audience\",\"renderedValue\":\"All students, faculty, staff, and campus visitors\",\"sourceValue\":\"All students, faculty, staff, and campus visitors\",\"start\":273},{\"end\":347,\"field\":\"endTime\",\"renderedValue\":\"2 Nov 2026, 18:00\",\"sourceValue\":\"2026-11-02T18:00\",\"start\":330},{\"end\":486,\"field\":\"accessibleRoute\",\"renderedValue\":\"Use the step-free East Gate entrance and follow the signed, level path to the main quad. Contact Campus Operations for assistance.\",\"sourceValue\":\"Use the step-free East Gate entrance and follow the signed, level path to the main quad. Contact Campus Operations for assistance.\",\"start\":356},{\"end\":521,\"field\":\"reason\",\"renderedValue\":\"Scheduled gate maintenance\",\"sourceValue\":\"Scheduled gate maintenance\",\"start\":495},{\"end\":590,\"field\":\"contact\",\"renderedValue\":\"Campus Operations · operations@westbridge.example\",\"sourceValue\":\"Campus Operations · operations@westbridge.example\",\"start\":541}],\"text\":\"North Gate closure\\nAction: Use the East Gate on University Road. Allow 10 extra minutes for your journey.\\nClosed: North Gate, Westbridge Campus\\nUse instead: East Gate, University Road, 200 m east of the North Gate\\nFrom: 2 Nov 2026, 08:00\\nTime zone: London (UTC+00:00)\\nFor: All students, faculty, staff, and campus visitors\\nUntil: 2 Nov 2026, 18:00\\nAccess: Use the step-free East Gate entrance and follow the signed, level path to the main quad. Contact Campus Operations for assistance.\\nReason: Scheduled gate maintenance\\nContact / updates: Campus Operations · operations@westbridge.example\"},\"channel\":\"sms\",\"title\":{\"references\":[],\"text\":\"\"}},\"preview\":{\"body\":\"North Gate closure\\nAction: Use the East Gate on University Road. Allow 10 extra minutes for your journey.\\nClosed: North Gate, Westbridge Campus\\nUse instead: East Gate, University Road, 200 m east of the North Gate\\nFrom: 2 Nov 2026, 08:00\\nTime zone: London (UTC+00:00)\\nFor: All students, faculty, staff, and campus visitors\\nUntil: 2 Nov 2026, 18:00\\nAccess: Use the step-free East Gate entrance and follow the signed, level path to the main quad. Contact Campus Operations for assistance.\\nReason: Scheduled gate maintenance\\nContact / updates: Campus Operations · operations@westbridge.example\",\"bodyVisibleEnd\":590,\"title\":\"\",\"titleVisibleEnd\":0,\"truncated\":false},\"representedCount\":8,\"status\":\"review-needed\",\"warningCount\":3}},\"draft\":{\"accessibleRoute\":\"Use the step-free East Gate entrance and follow the signed, level path to the main quad. Contact Campus Operations for assistance.\",\"action\":\"Use the East Gate on University Road. Allow 10 extra minutes for your journey.\",\"alternativeLocation\":\"East Gate, University Road, 200 m east of the North Gate\",\"audience\":\"All students, faculty, staff, and campus visitors\",\"body\":\"\",\"contact\":\"Campus Operations · operations@westbridge.example\",\"endTime\":\"2026-11-02T18:00\",\"eventName\":\"\",\"location\":\"North Gate, Westbridge Campus\",\"reason\":\"Scheduled gate maintenance\",\"scenario\":\"closure\",\"serviceName\":\"\",\"startTime\":\"2026-11-02T08:00\",\"timeZone\":\"London (UTC+00:00)\",\"title\":\"North Gate closure\",\"workaround\":\"\"},\"options\":{\"pushOrder\":\"action-first\",\"pushPreset\":\"compact\",\"smsCutoff\":false},\"requiredFacts\":[{\"field\":\"title\",\"label\":\"Announcement title\",\"state\":\"valid\",\"value\":\"North Gate closure\"},{\"field\":\"audience\",\"label\":\"Target audience\",\"state\":\"valid\",\"value\":\"All students, faculty, staff, and campus visitors\"},{\"field\":\"action\",\"label\":\"Required action\",\"state\":\"valid\",\"value\":\"Use the East Gate on University Road. Allow 10 extra minutes for your journey.\"},{\"field\":\"startTime\",\"label\":\"Effective time\",\"state\":\"valid\",\"value\":\"2026-11-02T08:00\"},{\"field\":\"timeZone\",\"label\":\"Time zone\",\"state\":\"valid\",\"value\":\"London (UTC+00:00)\"},{\"field\":\"contact\",\"label\":\"Contact or verification source\",\"state\":\"valid\",\"value\":\"Campus Operations · operations@westbridge.example\"},{\"field\":\"location\",\"label\":\"Affected entrance / location\",\"state\":\"valid\",\"value\":\"North Gate, Westbridge Campus\"},{\"field\":\"alternativeLocation\",\"label\":\"Alternative entrance\",\"state\":\"valid\",\"value\":\"East Gate, University Road, 200 m east of the North Gate\"}],\"result\":{\"completedFields\":8,\"completeness\":100,\"errorCount\":0,\"finalAnnouncement\":\"North Gate closure\\n\\nFor: All students, faculty, staff, and campus visitors\\n\\nClosed entrance: North Gate, Westbridge Campus\\nAlternative entrance: East Gate, University Road, 200 m east of the North Gate\\nAccessible route: Use the step-free East Gate entrance and follow the signed, level path to the main quad. Contact Campus Operations for assistance.\\nEffective from: 2 Nov 2026, 08:00 (London (UTC+00:00))\\nEnds: 2 Nov 2026, 18:00 (London (UTC+00:00))\\nReason: Scheduled gate maintenance\\n\\nWhat you need to do: Use the East Gate on University Road. Allow 10 extra minutes for your journey.\\n\\nContact / updates: Campus Operations · operations@westbridge.example\",\"findings\":[{\"explanation\":\"The final announcement needs a title so readers can identify its purpose.\",\"field\":\"title\",\"id\":\"CORE-01\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Add a specific title that identifies the change.\",\"title\":\"A clear announcement title\"},{\"explanation\":\"Readers need to know whether this announcement applies to them.\",\"field\":\"audience\",\"id\":\"CORE-02\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Name the affected students, staff, visitors, or service users.\",\"title\":\"Target audience identified\"},{\"explanation\":\"This scenario requires an explicit action in the final announcement.\",\"field\":\"action\",\"id\":\"CORE-03\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Tell readers exactly what to do next, even if no action is needed.\",\"title\":\"A concrete next step\"},{\"explanation\":\"A valid date and time are required. Relative phrases such as “tomorrow” are ambiguous.\",\"field\":\"startTime\",\"id\":\"CORE-04\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Set the exact date and time this change takes effect.\",\"title\":\"An exact effective time\"},{\"explanation\":\"A clock time without a time zone can be interpreted differently by readers.\",\"field\":\"timeZone\",\"id\":\"CORE-05\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Specify the local time zone and UTC offset, for example London (UTC+00:00).\",\"title\":\"Time zone provided\"},{\"explanation\":\"Readers need a contact route or an update source. A name alone is insufficient.\",\"field\":\"contact\",\"id\":\"CORE-06\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Include an email address, phone number, or full https:// update URL.\",\"title\":\"A reachable verification source\"},{\"explanation\":\"If an end time is provided, it must be valid and later than the start, in the stated time zone.\",\"field\":\"endTime\",\"id\":\"CORE-07\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Use a valid end date and time later than the start, or leave the end blank if unknown.\",\"title\":\"Time range is consistent\"},{\"explanation\":\"The rules check structured facts. They cannot detect contradictions, misleading claims, or unclear language in additional context.\",\"field\":\"body\",\"id\":\"CORE-08\",\"severity\":\"warning\",\"status\":\"passed\",\"suggestion\":\"Review the context against every structured fact in the final preview, or remove redundant context.\",\"title\":\"Additional prose needs human review\"},{\"explanation\":\"The final preview is regenerated from the checked fields on every edit. Free-text context is separately marked for review.\",\"field\":\"title\",\"id\":\"CORE-09\",\"severity\":\"informational\",\"status\":\"passed\",\"suggestion\":\"Copy or download the generated final announcement, then obtain the appropriate human approval.\",\"title\":\"Structured facts included in final text\"},{\"explanation\":\"A closure must identify the entrance or location that is unavailable.\",\"field\":\"location\",\"id\":\"CLOSURE-01\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Name the closed entrance and campus or building.\",\"title\":\"Affected entrance identified\"},{\"explanation\":\"People need an explicit alternative route while the entrance is closed.\",\"field\":\"alternativeLocation\",\"id\":\"CLOSURE-02\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Add the alternative entrance and directions to reach it.\",\"title\":\"An alternative entrance\"},{\"explanation\":\"An alternative entrance is not automatically accessible. Readers may need step-free route information.\",\"field\":\"accessibleRoute\",\"id\":\"CLOSURE-03\",\"severity\":\"warning\",\"status\":\"passed\",\"suggestion\":\"Describe the step-free route, or give a contact for access assistance. Verify it on site.\",\"title\":\"Accessible route described\"},{\"explanation\":\"An end time helps readers plan their return. If it is unknown, the action should explain where to get updates.\",\"field\":\"endTime\",\"id\":\"CLOSURE-04\",\"severity\":\"warning\",\"status\":\"passed\",\"suggestion\":\"Add the expected reopening date and time when confirmed.\",\"title\":\"Closure end time provided\"}],\"passedCount\":13,\"requiredFields\":8,\"status\":\"checks-passed\",\"warningCount\":0},\"rulesetVersion\":\"source-1.0/channel-1.0/review-1.0\"}"
+    },
+    {
+      "draft": {
+        "scenario": "closure",
+        "title": "North Gate closure",
+        "audience": "All students, faculty, staff, and campus visitors",
+        "body": "",
+        "action": "",
+        "location": "North Gate, Westbridge Campus",
+        "startTime": "",
+        "endTime": "",
+        "timeZone": "London (UTC+00:00)",
+        "alternativeLocation": "",
+        "accessibleRoute": "",
+        "contact": "Campus Operations · operations@westbridge.example",
+        "eventName": "",
+        "serviceName": "",
+        "workaround": "",
+        "reason": ""
+      },
+      "options": {
+        "smsCutoff": false,
+        "pushPreset": "compact",
+        "pushOrder": "action-first"
+      },
+      "rulesetVersion": "source-1.0/channel-1.0/review-1.0",
+      "result": {
+        "findings": [
+          {
+            "id": "CORE-01",
+            "field": "title",
+            "title": "A clear announcement title",
+            "severity": "error",
+            "explanation": "The final announcement needs a title so readers can identify its purpose.",
+            "suggestion": "Add a specific title that identifies the change.",
+            "status": "passed"
+          },
+          {
+            "id": "CORE-02",
+            "field": "audience",
+            "title": "Target audience identified",
+            "severity": "error",
+            "explanation": "Readers need to know whether this announcement applies to them.",
+            "suggestion": "Name the affected students, staff, visitors, or service users.",
+            "status": "passed"
+          },
+          {
+            "id": "CORE-03",
+            "field": "action",
+            "title": "A concrete next step",
+            "severity": "error",
+            "explanation": "This scenario requires an explicit action in the final announcement.",
+            "suggestion": "Tell readers exactly what to do next, even if no action is needed.",
+            "status": "failed"
+          },
+          {
+            "id": "CORE-04",
+            "field": "startTime",
+            "title": "An exact effective time",
+            "severity": "error",
+            "explanation": "A valid date and time are required. Relative phrases such as “tomorrow” are ambiguous.",
+            "suggestion": "Set the exact date and time this change takes effect.",
+            "status": "failed"
+          },
+          {
+            "id": "CORE-05",
+            "field": "timeZone",
+            "title": "Time zone provided",
+            "severity": "error",
+            "explanation": "A clock time without a time zone can be interpreted differently by readers.",
+            "suggestion": "Specify the local time zone and UTC offset, for example London (UTC+00:00).",
+            "status": "passed"
+          },
+          {
+            "id": "CORE-06",
+            "field": "contact",
+            "title": "A reachable verification source",
+            "severity": "error",
+            "explanation": "Readers need a contact route or an update source. A name alone is insufficient.",
+            "suggestion": "Include an email address, phone number, or full https:// update URL.",
+            "status": "passed"
+          },
+          {
+            "id": "CORE-07",
+            "field": "endTime",
+            "title": "Time range is consistent",
+            "severity": "error",
+            "explanation": "If an end time is provided, it must be valid and later than the start, in the stated time zone.",
+            "suggestion": "Use a valid end date and time later than the start, or leave the end blank if unknown.",
+            "status": "passed"
+          },
+          {
+            "id": "CORE-08",
+            "field": "body",
+            "title": "Additional prose needs human review",
+            "severity": "warning",
+            "explanation": "The rules check structured facts. They cannot detect contradictions, misleading claims, or unclear language in additional context.",
+            "suggestion": "Review the context against every structured fact in the final preview, or remove redundant context.",
+            "status": "passed"
+          },
+          {
+            "id": "CORE-09",
+            "field": "title",
+            "title": "Structured facts included in final text",
+            "severity": "informational",
+            "explanation": "The final preview is regenerated from the checked fields on every edit. Free-text context is separately marked for review.",
+            "suggestion": "Copy or download the generated final announcement, then obtain the appropriate human approval.",
+            "status": "passed"
+          },
+          {
+            "id": "CLOSURE-01",
+            "field": "location",
+            "title": "Affected entrance identified",
+            "severity": "error",
+            "explanation": "A closure must identify the entrance or location that is unavailable.",
+            "suggestion": "Name the closed entrance and campus or building.",
+            "status": "passed"
+          },
+          {
+            "id": "CLOSURE-02",
+            "field": "alternativeLocation",
+            "title": "An alternative entrance",
+            "severity": "error",
+            "explanation": "People need an explicit alternative route while the entrance is closed.",
+            "suggestion": "Add the alternative entrance and directions to reach it.",
+            "status": "failed"
+          },
+          {
+            "id": "CLOSURE-03",
+            "field": "accessibleRoute",
+            "title": "Accessible route described",
+            "severity": "warning",
+            "explanation": "An alternative entrance is not automatically accessible. Readers may need step-free route information.",
+            "suggestion": "Describe the step-free route, or give a contact for access assistance. Verify it on site.",
+            "status": "failed"
+          },
+          {
+            "id": "CLOSURE-04",
+            "field": "endTime",
+            "title": "Closure end time provided",
+            "severity": "warning",
+            "explanation": "An end time helps readers plan their return. If it is unknown, the action should explain where to get updates.",
+            "suggestion": "Add the expected reopening date and time when confirmed.",
+            "status": "failed"
+          }
+        ],
+        "errorCount": 3,
+        "warningCount": 2,
+        "status": "needs-attention",
+        "passedCount": 8,
+        "completeness": 63,
+        "completedFields": 5,
+        "requiredFields": 8,
+        "finalAnnouncement": "North Gate closure\n\nFor: All students, faculty, staff, and campus visitors\n\nClosed entrance: North Gate, Westbridge Campus\nAlternative entrance: [not specified]\nEffective from: [not specified — valid date and time required] (London (UTC+00:00))\n\nWhat you need to do: [not specified]\n\nContact / updates: Campus Operations · operations@westbridge.example"
+      },
+      "channels": {
+        "sms": {
+          "payload": {
+            "channel": "sms",
+            "title": { "text": "", "references": [] },
+            "body": {
+              "text": "North Gate closure\nAction: [missing: action]\nClosed: North Gate, Westbridge Campus\nUse instead: [missing: alternativeLocation]\nFrom: [missing: startTime]\nTime zone: London (UTC+00:00)\nFor: All students, faculty, staff, and campus visitors\nContact / updates: Campus Operations · operations@westbridge.example",
+              "references": [
+                {
+                  "field": "title",
+                  "sourceValue": "North Gate closure",
+                  "renderedValue": "North Gate closure",
+                  "start": 0,
+                  "end": 18
+                },
+                {
+                  "field": "location",
+                  "sourceValue": "North Gate, Westbridge Campus",
+                  "renderedValue": "North Gate, Westbridge Campus",
+                  "start": 53,
+                  "end": 82
+                },
+                {
+                  "field": "timeZone",
+                  "sourceValue": "London (UTC+00:00)",
+                  "renderedValue": "London (UTC+00:00)",
+                  "start": 165,
+                  "end": 183
+                },
+                {
+                  "field": "audience",
+                  "sourceValue": "All students, faculty, staff, and campus visitors",
+                  "renderedValue": "All students, faculty, staff, and campus visitors",
+                  "start": 189,
+                  "end": 238
+                },
+                {
+                  "field": "contact",
+                  "sourceValue": "Campus Operations · operations@westbridge.example",
+                  "renderedValue": "Campus Operations · operations@westbridge.example",
+                  "start": 258,
+                  "end": 307
+                }
+              ]
+            }
+          },
+          "preview": {
+            "title": "",
+            "body": "North Gate closure\nAction: [missing: action]\nClosed: North Gate, Westbridge Campus\nUse instead: [missing: alternativeLocation]\nFrom: [missing: startTime]\nTime zone: London (UTC+00:00)\nFor: All students, faculty, staff, and campus visitors\nContact / updates: Campus Operations · operations@westbridge.example",
+            "titleVisibleEnd": 0,
+            "bodyVisibleEnd": 307,
+            "truncated": false
+          },
+          "metrics": {
+            "titleCharacters": 0,
+            "bodyCharacters": 307,
+            "sms": {
+              "encoding": "UCS-2 / UTF-16",
+              "characters": 307,
+              "units": 307,
+              "unitLabel": "UTF-16 code units",
+              "extensionCharacters": 6,
+              "nonGsmCharacters": ["·"],
+              "singleSegmentLimit": 70,
+              "multipartSegmentLimit": 67,
+              "segments": 5,
+              "segmentUnits": [67, 67, 67, 67, 39]
+            }
+          },
+          "coverage": [
+            {
+              "field": "title",
+              "status": "represented",
+              "collapsedVisibility": "visible"
+            },
+            {
+              "field": "audience",
+              "status": "represented",
+              "collapsedVisibility": "visible"
+            },
+            {
+              "field": "action",
+              "status": "source-missing",
+              "collapsedVisibility": "unavailable"
+            },
+            {
+              "field": "startTime",
+              "status": "source-missing",
+              "collapsedVisibility": "unavailable"
+            },
+            {
+              "field": "timeZone",
+              "status": "represented",
+              "collapsedVisibility": "visible"
+            },
+            {
+              "field": "contact",
+              "status": "represented",
+              "collapsedVisibility": "visible"
+            },
+            {
+              "field": "location",
+              "status": "represented",
+              "collapsedVisibility": "visible"
+            },
+            {
+              "field": "alternativeLocation",
+              "status": "source-missing",
+              "collapsedVisibility": "unavailable"
+            }
+          ],
+          "findings": [
+            {
+              "id": "CH-SMS-001-title",
+              "title": "Announcement title: represented",
+              "channel": "sms",
+              "severity": "error",
+              "status": "passed",
+              "explanation": "Announcement title must be represented by a complete, current semantic reference in the actual channel payload.",
+              "suggestion": "Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.",
+              "field": "title"
+            },
+            {
+              "id": "CH-SMS-001-audience",
+              "title": "Target audience: represented",
+              "channel": "sms",
+              "severity": "error",
+              "status": "passed",
+              "explanation": "Target audience must be represented by a complete, current semantic reference in the actual channel payload.",
+              "suggestion": "Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.",
+              "field": "audience"
+            },
+            {
+              "id": "CH-SMS-001-action",
+              "title": "Required action: fix the source",
+              "channel": "sms",
+              "severity": "error",
+              "status": "failed",
+              "explanation": "Required action is missing, a placeholder, or invalid in the source. A generated preview cannot repair it.",
+              "suggestion": "Edit required action in the announcement lab, then recheck this channel.",
+              "field": "action"
+            },
+            {
+              "id": "CH-SMS-001-startTime",
+              "title": "Effective time: fix the source",
+              "channel": "sms",
+              "severity": "error",
+              "status": "failed",
+              "explanation": "Effective time is missing, a placeholder, or invalid in the source. A generated preview cannot repair it.",
+              "suggestion": "Edit effective time in the announcement lab, then recheck this channel.",
+              "field": "startTime"
+            },
+            {
+              "id": "CH-SMS-001-timeZone",
+              "title": "Time zone: represented",
+              "channel": "sms",
+              "severity": "error",
+              "status": "passed",
+              "explanation": "Time zone must be represented by a complete, current semantic reference in the actual channel payload.",
+              "suggestion": "Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.",
+              "field": "timeZone"
+            },
+            {
+              "id": "CH-SMS-001-contact",
+              "title": "Contact or verification source: represented",
+              "channel": "sms",
+              "severity": "error",
+              "status": "passed",
+              "explanation": "Contact or verification source must be represented by a complete, current semantic reference in the actual channel payload.",
+              "suggestion": "Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.",
+              "field": "contact"
+            },
+            {
+              "id": "CH-SMS-001-location",
+              "title": "Affected entrance / location: represented",
+              "channel": "sms",
+              "severity": "error",
+              "status": "passed",
+              "explanation": "Affected entrance / location must be represented by a complete, current semantic reference in the actual channel payload.",
+              "suggestion": "Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.",
+              "field": "location"
+            },
+            {
+              "id": "CH-SMS-001-alternativeLocation",
+              "title": "Alternative entrance: fix the source",
+              "channel": "sms",
+              "severity": "error",
+              "status": "failed",
+              "explanation": "Alternative entrance is missing, a placeholder, or invalid in the source. A generated preview cannot repair it.",
+              "suggestion": "Edit alternative entrance in the announcement lab, then recheck this channel.",
+              "field": "alternativeLocation"
+            },
+            {
+              "id": "CH-SMS-002",
+              "title": "No visible placeholders",
+              "channel": "sms",
+              "severity": "error",
+              "status": "failed",
+              "explanation": "Visible missing/invalid markers or TBD/TBC text need attention; placeholders never count as facts.",
+              "suggestion": "Replace placeholders in the source fields; do not hide the marker in the channel template."
+            },
+            {
+              "id": "CH-SMS-003",
+              "title": "Channel content is present",
+              "channel": "sms",
+              "severity": "error",
+              "status": "passed",
+              "explanation": "A channel needs message content; email requires a subject and push requires a title.",
+              "suggestion": "Add a source title and required details, then regenerate the channel.",
+              "field": "title"
+            },
+            {
+              "id": "CH-SMS-004",
+              "title": "Additional context is excluded",
+              "channel": "sms",
+              "severity": "informational",
+              "status": "passed",
+              "explanation": "Free-text additional context is intentionally excluded from all channel templates. It is not treated as a structured fact.",
+              "suggestion": "Review the source context yourself. Move essential details into the appropriate structured fields.",
+              "field": "body"
+            },
+            {
+              "id": "CH-SMS-005",
+              "title": "Multipart SMS",
+              "channel": "sms",
+              "severity": "warning",
+              "status": "failed",
+              "explanation": "The current text is estimated at 5 SMS segments. Multipart messages are normally reassembled; they are not inherently truncated.",
+              "suggestion": "Review length and cost with your provider. Keep the critical facts; use another channel if needed."
+            },
+            {
+              "id": "CH-SMS-006",
+              "title": "Long SMS review threshold",
+              "channel": "sms",
+              "severity": "warning",
+              "status": "passed",
+              "explanation": "This lab flags messages above 6 estimated segments for review. This is a product review threshold, not a carrier delivery limit.",
+              "suggestion": "Tighten the wording in the source or choose email for the full detail. Do not remove required facts."
+            },
+            {
+              "id": "CH-SMS-007",
+              "title": "Unicode encoding",
+              "channel": "sms",
+              "severity": "warning",
+              "status": "failed",
+              "explanation": "At least one non-GSM character switches the whole message to a Unicode estimate using UTF-16 code units. Emoji can consume two or more units.",
+              "suggestion": "Inspect non-GSM characters and choose simpler punctuation only when meaning is preserved. No automatic substitutions are made."
+            },
+            {
+              "id": "CH-SMS-008",
+              "title": "Artificial first-segment cutoff",
+              "channel": "sms",
+              "severity": "warning",
+              "status": "passed",
+              "explanation": "This is an intentional loss test, not normal multipart SMS behavior. Only the first transport segment is kept; later facts may be absent.",
+              "suggestion": "Disable the cutoff to restore the full multipart payload. Inspect every omitted fact before using any shortened text."
+            }
+          ],
+          "errorCount": 4,
+          "warningCount": 2,
+          "representedCount": 5,
+          "status": "needs-attention",
+          "overallStatus": "needs-attention"
+        },
+        "push": {
+          "payload": {
+            "channel": "push",
+            "title": {
+              "text": "North Gate closure",
+              "references": [
+                {
+                  "field": "title",
+                  "sourceValue": "North Gate closure",
+                  "renderedValue": "North Gate closure",
+                  "start": 0,
+                  "end": 18
+                }
+              ]
+            },
+            "body": {
+              "text": "Action: [missing: action]\nClosed: North Gate, Westbridge Campus\nUse instead: [missing: alternativeLocation]\nFrom: [missing: startTime]\nTime zone: London (UTC+00:00)\nFor: All students, faculty, staff, and campus visitors\nContact / updates: Campus Operations · operations@westbridge.example",
+              "references": [
+                {
+                  "field": "location",
+                  "sourceValue": "North Gate, Westbridge Campus",
+                  "renderedValue": "North Gate, Westbridge Campus",
+                  "start": 34,
+                  "end": 63
+                },
+                {
+                  "field": "timeZone",
+                  "sourceValue": "London (UTC+00:00)",
+                  "renderedValue": "London (UTC+00:00)",
+                  "start": 146,
+                  "end": 164
+                },
+                {
+                  "field": "audience",
+                  "sourceValue": "All students, faculty, staff, and campus visitors",
+                  "renderedValue": "All students, faculty, staff, and campus visitors",
+                  "start": 170,
+                  "end": 219
+                },
+                {
+                  "field": "contact",
+                  "sourceValue": "Campus Operations · operations@westbridge.example",
+                  "renderedValue": "Campus Operations · operations@westbridge.example",
+                  "start": 239,
+                  "end": 288
+                }
+              ]
+            }
+          },
+          "preview": {
+            "title": "North Gate closure",
+            "body": "Action: [missing: action]\nClosed: North Gate, Westbridge Campus\nUse instead: [missing: alternativeLocation]\nF…",
+            "titleVisibleEnd": 18,
+            "bodyVisibleEnd": 109,
+            "truncated": true
+          },
+          "metrics": { "titleCharacters": 18, "bodyCharacters": 288 },
+          "coverage": [
+            {
+              "field": "title",
+              "status": "represented",
+              "collapsedVisibility": "visible"
+            },
+            {
+              "field": "audience",
+              "status": "represented",
+              "collapsedVisibility": "hidden"
+            },
+            {
+              "field": "action",
+              "status": "source-missing",
+              "collapsedVisibility": "unavailable"
+            },
+            {
+              "field": "startTime",
+              "status": "source-missing",
+              "collapsedVisibility": "unavailable"
+            },
+            {
+              "field": "timeZone",
+              "status": "represented",
+              "collapsedVisibility": "hidden"
+            },
+            {
+              "field": "contact",
+              "status": "represented",
+              "collapsedVisibility": "hidden"
+            },
+            {
+              "field": "location",
+              "status": "represented",
+              "collapsedVisibility": "visible"
+            },
+            {
+              "field": "alternativeLocation",
+              "status": "source-missing",
+              "collapsedVisibility": "unavailable"
+            }
+          ],
+          "findings": [
+            {
+              "id": "CH-PUSH-001-title",
+              "title": "Announcement title: represented",
+              "channel": "push",
+              "severity": "error",
+              "status": "passed",
+              "explanation": "Announcement title must be represented by a complete, current semantic reference in the actual channel payload.",
+              "suggestion": "Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.",
+              "field": "title"
+            },
+            {
+              "id": "CH-PUSH-001-audience",
+              "title": "Target audience: represented",
+              "channel": "push",
+              "severity": "error",
+              "status": "passed",
+              "explanation": "Target audience must be represented by a complete, current semantic reference in the actual channel payload.",
+              "suggestion": "Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.",
+              "field": "audience"
+            },
+            {
+              "id": "CH-PUSH-001-action",
+              "title": "Required action: fix the source",
+              "channel": "push",
+              "severity": "error",
+              "status": "failed",
+              "explanation": "Required action is missing, a placeholder, or invalid in the source. A generated preview cannot repair it.",
+              "suggestion": "Edit required action in the announcement lab, then recheck this channel.",
+              "field": "action"
+            },
+            {
+              "id": "CH-PUSH-001-startTime",
+              "title": "Effective time: fix the source",
+              "channel": "push",
+              "severity": "error",
+              "status": "failed",
+              "explanation": "Effective time is missing, a placeholder, or invalid in the source. A generated preview cannot repair it.",
+              "suggestion": "Edit effective time in the announcement lab, then recheck this channel.",
+              "field": "startTime"
+            },
+            {
+              "id": "CH-PUSH-001-timeZone",
+              "title": "Time zone: represented",
+              "channel": "push",
+              "severity": "error",
+              "status": "passed",
+              "explanation": "Time zone must be represented by a complete, current semantic reference in the actual channel payload.",
+              "suggestion": "Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.",
+              "field": "timeZone"
+            },
+            {
+              "id": "CH-PUSH-001-contact",
+              "title": "Contact or verification source: represented",
+              "channel": "push",
+              "severity": "error",
+              "status": "passed",
+              "explanation": "Contact or verification source must be represented by a complete, current semantic reference in the actual channel payload.",
+              "suggestion": "Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.",
+              "field": "contact"
+            },
+            {
+              "id": "CH-PUSH-001-location",
+              "title": "Affected entrance / location: represented",
+              "channel": "push",
+              "severity": "error",
+              "status": "passed",
+              "explanation": "Affected entrance / location must be represented by a complete, current semantic reference in the actual channel payload.",
+              "suggestion": "Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.",
+              "field": "location"
+            },
+            {
+              "id": "CH-PUSH-001-alternativeLocation",
+              "title": "Alternative entrance: fix the source",
+              "channel": "push",
+              "severity": "error",
+              "status": "failed",
+              "explanation": "Alternative entrance is missing, a placeholder, or invalid in the source. A generated preview cannot repair it.",
+              "suggestion": "Edit alternative entrance in the announcement lab, then recheck this channel.",
+              "field": "alternativeLocation"
+            },
+            {
+              "id": "CH-PUSH-002",
+              "title": "No visible placeholders",
+              "channel": "push",
+              "severity": "error",
+              "status": "failed",
+              "explanation": "Visible missing/invalid markers or TBD/TBC text need attention; placeholders never count as facts.",
+              "suggestion": "Replace placeholders in the source fields; do not hide the marker in the channel template."
+            },
+            {
+              "id": "CH-PUSH-003",
+              "title": "Channel content is present",
+              "channel": "push",
+              "severity": "error",
+              "status": "passed",
+              "explanation": "A channel needs message content; email requires a subject and push requires a title.",
+              "suggestion": "Add a source title and required details, then regenerate the channel.",
+              "field": "title"
+            },
+            {
+              "id": "CH-PUSH-004",
+              "title": "Additional context is excluded",
+              "channel": "push",
+              "severity": "informational",
+              "status": "passed",
+              "explanation": "Free-text additional context is intentionally excluded from all channel templates. It is not treated as a structured fact.",
+              "suggestion": "Review the source context yourself. Move essential details into the appropriate structured fields.",
+              "field": "body"
+            },
+            {
+              "id": "CH-PUSH-005",
+              "title": "Collapsed card hides content",
+              "channel": "push",
+              "severity": "warning",
+              "status": "failed",
+              "explanation": "The generic card uses a code-point budget to approximate visibility. Expanded payload content can be present even when it is not visible in the collapsed card.",
+              "suggestion": "Inspect the expanded content and lead with the most urgent information. Device, font, settings, and OS behavior vary."
+            },
+            {
+              "id": "CH-PUSH-006-title",
+              "title": "Announcement title visible in collapsed card",
+              "channel": "push",
+              "severity": "warning",
+              "status": "passed",
+              "explanation": "A complete fact in the full payload is not necessarily fully visible in the collapsed notification.",
+              "suggestion": "Try a roomier generic preset or change the leading content. Verify how people can access full details on real devices.",
+              "field": "title"
+            },
+            {
+              "id": "CH-PUSH-006-audience",
+              "title": "Target audience hidden in collapsed card",
+              "channel": "push",
+              "severity": "warning",
+              "status": "failed",
+              "explanation": "A complete fact in the full payload is not necessarily fully visible in the collapsed notification.",
+              "suggestion": "Try a roomier generic preset or change the leading content. Verify how people can access full details on real devices.",
+              "field": "audience"
+            },
+            {
+              "id": "CH-PUSH-006-timeZone",
+              "title": "Time zone hidden in collapsed card",
+              "channel": "push",
+              "severity": "warning",
+              "status": "failed",
+              "explanation": "A complete fact in the full payload is not necessarily fully visible in the collapsed notification.",
+              "suggestion": "Try a roomier generic preset or change the leading content. Verify how people can access full details on real devices.",
+              "field": "timeZone"
+            },
+            {
+              "id": "CH-PUSH-006-contact",
+              "title": "Contact or verification source hidden in collapsed card",
+              "channel": "push",
+              "severity": "warning",
+              "status": "failed",
+              "explanation": "A complete fact in the full payload is not necessarily fully visible in the collapsed notification.",
+              "suggestion": "Try a roomier generic preset or change the leading content. Verify how people can access full details on real devices.",
+              "field": "contact"
+            },
+            {
+              "id": "CH-PUSH-006-location",
+              "title": "Affected entrance / location visible in collapsed card",
+              "channel": "push",
+              "severity": "warning",
+              "status": "passed",
+              "explanation": "A complete fact in the full payload is not necessarily fully visible in the collapsed notification.",
+              "suggestion": "Try a roomier generic preset or change the leading content. Verify how people can access full details on real devices.",
+              "field": "location"
+            }
+          ],
+          "errorCount": 4,
+          "warningCount": 4,
+          "representedCount": 5,
+          "status": "needs-attention",
+          "overallStatus": "needs-attention"
+        },
+        "email": {
+          "payload": {
+            "channel": "email",
+            "title": {
+              "text": "North Gate closure",
+              "references": [
+                {
+                  "field": "title",
+                  "sourceValue": "North Gate closure",
+                  "renderedValue": "North Gate closure",
+                  "start": 0,
+                  "end": 18
+                }
+              ]
+            },
+            "body": {
+              "text": "Action: [missing: action]\nClosed: North Gate, Westbridge Campus\nUse instead: [missing: alternativeLocation]\nFrom: [missing: startTime]\nTime zone: London (UTC+00:00)\nFor: All students, faculty, staff, and campus visitors\nContact / updates: Campus Operations · operations@westbridge.example",
+              "references": [
+                {
+                  "field": "location",
+                  "sourceValue": "North Gate, Westbridge Campus",
+                  "renderedValue": "North Gate, Westbridge Campus",
+                  "start": 34,
+                  "end": 63
+                },
+                {
+                  "field": "timeZone",
+                  "sourceValue": "London (UTC+00:00)",
+                  "renderedValue": "London (UTC+00:00)",
+                  "start": 146,
+                  "end": 164
+                },
+                {
+                  "field": "audience",
+                  "sourceValue": "All students, faculty, staff, and campus visitors",
+                  "renderedValue": "All students, faculty, staff, and campus visitors",
+                  "start": 170,
+                  "end": 219
+                },
+                {
+                  "field": "contact",
+                  "sourceValue": "Campus Operations · operations@westbridge.example",
+                  "renderedValue": "Campus Operations · operations@westbridge.example",
+                  "start": 239,
+                  "end": 288
+                }
+              ]
+            }
+          },
+          "preview": {
+            "title": "North Gate closure",
+            "body": "Action: [missing: action]\nClosed: North Gate, Westbridge Campus\nUse instead: [missing: alternativeLocation]\nFrom: [miss…",
+            "titleVisibleEnd": 18,
+            "bodyVisibleEnd": 119,
+            "truncated": true
+          },
+          "metrics": { "titleCharacters": 18, "bodyCharacters": 288 },
+          "coverage": [
+            {
+              "field": "title",
+              "status": "represented",
+              "collapsedVisibility": "visible"
+            },
+            {
+              "field": "audience",
+              "status": "represented",
+              "collapsedVisibility": "hidden"
+            },
+            {
+              "field": "action",
+              "status": "source-missing",
+              "collapsedVisibility": "unavailable"
+            },
+            {
+              "field": "startTime",
+              "status": "source-missing",
+              "collapsedVisibility": "unavailable"
+            },
+            {
+              "field": "timeZone",
+              "status": "represented",
+              "collapsedVisibility": "hidden"
+            },
+            {
+              "field": "contact",
+              "status": "represented",
+              "collapsedVisibility": "hidden"
+            },
+            {
+              "field": "location",
+              "status": "represented",
+              "collapsedVisibility": "visible"
+            },
+            {
+              "field": "alternativeLocation",
+              "status": "source-missing",
+              "collapsedVisibility": "unavailable"
+            }
+          ],
+          "findings": [
+            {
+              "id": "CH-EMAIL-001-title",
+              "title": "Announcement title: represented",
+              "channel": "email",
+              "severity": "error",
+              "status": "passed",
+              "explanation": "Announcement title must be represented by a complete, current semantic reference in the actual channel payload.",
+              "suggestion": "Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.",
+              "field": "title"
+            },
+            {
+              "id": "CH-EMAIL-001-audience",
+              "title": "Target audience: represented",
+              "channel": "email",
+              "severity": "error",
+              "status": "passed",
+              "explanation": "Target audience must be represented by a complete, current semantic reference in the actual channel payload.",
+              "suggestion": "Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.",
+              "field": "audience"
+            },
+            {
+              "id": "CH-EMAIL-001-action",
+              "title": "Required action: fix the source",
+              "channel": "email",
+              "severity": "error",
+              "status": "failed",
+              "explanation": "Required action is missing, a placeholder, or invalid in the source. A generated preview cannot repair it.",
+              "suggestion": "Edit required action in the announcement lab, then recheck this channel.",
+              "field": "action"
+            },
+            {
+              "id": "CH-EMAIL-001-startTime",
+              "title": "Effective time: fix the source",
+              "channel": "email",
+              "severity": "error",
+              "status": "failed",
+              "explanation": "Effective time is missing, a placeholder, or invalid in the source. A generated preview cannot repair it.",
+              "suggestion": "Edit effective time in the announcement lab, then recheck this channel.",
+              "field": "startTime"
+            },
+            {
+              "id": "CH-EMAIL-001-timeZone",
+              "title": "Time zone: represented",
+              "channel": "email",
+              "severity": "error",
+              "status": "passed",
+              "explanation": "Time zone must be represented by a complete, current semantic reference in the actual channel payload.",
+              "suggestion": "Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.",
+              "field": "timeZone"
+            },
+            {
+              "id": "CH-EMAIL-001-contact",
+              "title": "Contact or verification source: represented",
+              "channel": "email",
+              "severity": "error",
+              "status": "passed",
+              "explanation": "Contact or verification source must be represented by a complete, current semantic reference in the actual channel payload.",
+              "suggestion": "Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.",
+              "field": "contact"
+            },
+            {
+              "id": "CH-EMAIL-001-location",
+              "title": "Affected entrance / location: represented",
+              "channel": "email",
+              "severity": "error",
+              "status": "passed",
+              "explanation": "Affected entrance / location must be represented by a complete, current semantic reference in the actual channel payload.",
+              "suggestion": "Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.",
+              "field": "location"
+            },
+            {
+              "id": "CH-EMAIL-001-alternativeLocation",
+              "title": "Alternative entrance: fix the source",
+              "channel": "email",
+              "severity": "error",
+              "status": "failed",
+              "explanation": "Alternative entrance is missing, a placeholder, or invalid in the source. A generated preview cannot repair it.",
+              "suggestion": "Edit alternative entrance in the announcement lab, then recheck this channel.",
+              "field": "alternativeLocation"
+            },
+            {
+              "id": "CH-EMAIL-002",
+              "title": "No visible placeholders",
+              "channel": "email",
+              "severity": "error",
+              "status": "failed",
+              "explanation": "Visible missing/invalid markers or TBD/TBC text need attention; placeholders never count as facts.",
+              "suggestion": "Replace placeholders in the source fields; do not hide the marker in the channel template."
+            },
+            {
+              "id": "CH-EMAIL-003",
+              "title": "Channel content is present",
+              "channel": "email",
+              "severity": "error",
+              "status": "passed",
+              "explanation": "A channel needs message content; email requires a subject and push requires a title.",
+              "suggestion": "Add a source title and required details, then regenerate the channel.",
+              "field": "title"
+            },
+            {
+              "id": "CH-EMAIL-004",
+              "title": "Additional context is excluded",
+              "channel": "email",
+              "severity": "informational",
+              "status": "passed",
+              "explanation": "Free-text additional context is intentionally excluded from all channel templates. It is not treated as a structured fact.",
+              "suggestion": "Review the source context yourself. Move essential details into the appropriate structured fields.",
+              "field": "body"
+            },
+            {
+              "id": "CH-EMAIL-005",
+              "title": "Inbox subject visibility",
+              "channel": "email",
+              "severity": "warning",
+              "status": "passed",
+              "explanation": "The generic inbox clips subjects after a 60-code-point budget. This is a simulation, not an email client limit.",
+              "suggestion": "Keep the subject concise and preserve the specific affected event, entrance, or service.",
+              "field": "title"
+            },
+            {
+              "id": "CH-EMAIL-006",
+              "title": "Inbox snippet is a sample",
+              "channel": "email",
+              "severity": "informational",
+              "status": "passed",
+              "explanation": "The snippet shows the first 120 code points of the body; the full body is preserved. Actual clients may select a different snippet.",
+              "suggestion": "Review the full body as well as the inbox view. No sender identity, receipt, or delivery status is verified."
+            }
+          ],
+          "errorCount": 4,
+          "warningCount": 0,
+          "representedCount": 5,
+          "status": "needs-attention",
+          "overallStatus": "needs-attention"
+        }
+      },
+      "requiredFacts": [
+        {
+          "field": "title",
+          "label": "Announcement title",
+          "value": "North Gate closure",
+          "state": "valid"
+        },
+        {
+          "field": "audience",
+          "label": "Target audience",
+          "value": "All students, faculty, staff, and campus visitors",
+          "state": "valid"
+        },
+        {
+          "field": "action",
+          "label": "Required action",
+          "value": "",
+          "state": "missing"
+        },
+        {
+          "field": "startTime",
+          "label": "Effective time",
+          "value": "",
+          "state": "missing"
+        },
+        {
+          "field": "timeZone",
+          "label": "Time zone",
+          "value": "London (UTC+00:00)",
+          "state": "valid"
+        },
+        {
+          "field": "contact",
+          "label": "Contact or verification source",
+          "value": "Campus Operations · operations@westbridge.example",
+          "state": "valid"
+        },
+        {
+          "field": "location",
+          "label": "Affected entrance / location",
+          "value": "North Gate, Westbridge Campus",
+          "state": "valid"
+        },
+        {
+          "field": "alternativeLocation",
+          "label": "Alternative entrance",
+          "value": "",
+          "state": "missing"
+        }
+      ],
+      "assumptions": {
+        "templateVersion": "2.0",
+        "smsSingle": [160, 70],
+        "smsMultipart": [153, 67],
+        "pairPreservation": true,
+        "pushBudget": { "title": 32, "body": 110 },
+        "emailBudget": { "title": 60, "body": 120 },
+        "clock": "local-device"
+      },
+      "schemaVersion": 1,
+      "id": "build03-incomplete",
+      "timestamp": "2026-10-23T08:00:00.000Z",
+      "origin": "demo",
+      "contentKey": "{\"assumptions\":{\"clock\":\"local-device\",\"emailBudget\":{\"body\":120,\"title\":60},\"pairPreservation\":true,\"pushBudget\":{\"body\":110,\"title\":32},\"smsMultipart\":[153,67],\"smsSingle\":[160,70],\"templateVersion\":\"2.0\"},\"channels\":{\"email\":{\"coverage\":[{\"collapsedVisibility\":\"visible\",\"field\":\"title\",\"status\":\"represented\"},{\"collapsedVisibility\":\"hidden\",\"field\":\"audience\",\"status\":\"represented\"},{\"collapsedVisibility\":\"unavailable\",\"field\":\"action\",\"status\":\"source-missing\"},{\"collapsedVisibility\":\"unavailable\",\"field\":\"startTime\",\"status\":\"source-missing\"},{\"collapsedVisibility\":\"hidden\",\"field\":\"timeZone\",\"status\":\"represented\"},{\"collapsedVisibility\":\"hidden\",\"field\":\"contact\",\"status\":\"represented\"},{\"collapsedVisibility\":\"visible\",\"field\":\"location\",\"status\":\"represented\"},{\"collapsedVisibility\":\"unavailable\",\"field\":\"alternativeLocation\",\"status\":\"source-missing\"}],\"errorCount\":4,\"findings\":[{\"channel\":\"email\",\"explanation\":\"Announcement title must be represented by a complete, current semantic reference in the actual channel payload.\",\"field\":\"title\",\"id\":\"CH-EMAIL-001-title\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.\",\"title\":\"Announcement title: represented\"},{\"channel\":\"email\",\"explanation\":\"Target audience must be represented by a complete, current semantic reference in the actual channel payload.\",\"field\":\"audience\",\"id\":\"CH-EMAIL-001-audience\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.\",\"title\":\"Target audience: represented\"},{\"channel\":\"email\",\"explanation\":\"Required action is missing, a placeholder, or invalid in the source. A generated preview cannot repair it.\",\"field\":\"action\",\"id\":\"CH-EMAIL-001-action\",\"severity\":\"error\",\"status\":\"failed\",\"suggestion\":\"Edit required action in the announcement lab, then recheck this channel.\",\"title\":\"Required action: fix the source\"},{\"channel\":\"email\",\"explanation\":\"Effective time is missing, a placeholder, or invalid in the source. A generated preview cannot repair it.\",\"field\":\"startTime\",\"id\":\"CH-EMAIL-001-startTime\",\"severity\":\"error\",\"status\":\"failed\",\"suggestion\":\"Edit effective time in the announcement lab, then recheck this channel.\",\"title\":\"Effective time: fix the source\"},{\"channel\":\"email\",\"explanation\":\"Time zone must be represented by a complete, current semantic reference in the actual channel payload.\",\"field\":\"timeZone\",\"id\":\"CH-EMAIL-001-timeZone\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.\",\"title\":\"Time zone: represented\"},{\"channel\":\"email\",\"explanation\":\"Contact or verification source must be represented by a complete, current semantic reference in the actual channel payload.\",\"field\":\"contact\",\"id\":\"CH-EMAIL-001-contact\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.\",\"title\":\"Contact or verification source: represented\"},{\"channel\":\"email\",\"explanation\":\"Affected entrance / location must be represented by a complete, current semantic reference in the actual channel payload.\",\"field\":\"location\",\"id\":\"CH-EMAIL-001-location\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.\",\"title\":\"Affected entrance / location: represented\"},{\"channel\":\"email\",\"explanation\":\"Alternative entrance is missing, a placeholder, or invalid in the source. A generated preview cannot repair it.\",\"field\":\"alternativeLocation\",\"id\":\"CH-EMAIL-001-alternativeLocation\",\"severity\":\"error\",\"status\":\"failed\",\"suggestion\":\"Edit alternative entrance in the announcement lab, then recheck this channel.\",\"title\":\"Alternative entrance: fix the source\"},{\"channel\":\"email\",\"explanation\":\"Visible missing/invalid markers or TBD/TBC text need attention; placeholders never count as facts.\",\"id\":\"CH-EMAIL-002\",\"severity\":\"error\",\"status\":\"failed\",\"suggestion\":\"Replace placeholders in the source fields; do not hide the marker in the channel template.\",\"title\":\"No visible placeholders\"},{\"channel\":\"email\",\"explanation\":\"A channel needs message content; email requires a subject and push requires a title.\",\"field\":\"title\",\"id\":\"CH-EMAIL-003\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Add a source title and required details, then regenerate the channel.\",\"title\":\"Channel content is present\"},{\"channel\":\"email\",\"explanation\":\"Free-text additional context is intentionally excluded from all channel templates. It is not treated as a structured fact.\",\"field\":\"body\",\"id\":\"CH-EMAIL-004\",\"severity\":\"informational\",\"status\":\"passed\",\"suggestion\":\"Review the source context yourself. Move essential details into the appropriate structured fields.\",\"title\":\"Additional context is excluded\"},{\"channel\":\"email\",\"explanation\":\"The generic inbox clips subjects after a 60-code-point budget. This is a simulation, not an email client limit.\",\"field\":\"title\",\"id\":\"CH-EMAIL-005\",\"severity\":\"warning\",\"status\":\"passed\",\"suggestion\":\"Keep the subject concise and preserve the specific affected event, entrance, or service.\",\"title\":\"Inbox subject visibility\"},{\"channel\":\"email\",\"explanation\":\"The snippet shows the first 120 code points of the body; the full body is preserved. Actual clients may select a different snippet.\",\"id\":\"CH-EMAIL-006\",\"severity\":\"informational\",\"status\":\"passed\",\"suggestion\":\"Review the full body as well as the inbox view. No sender identity, receipt, or delivery status is verified.\",\"title\":\"Inbox snippet is a sample\"}],\"metrics\":{\"bodyCharacters\":288,\"titleCharacters\":18},\"overallStatus\":\"needs-attention\",\"payload\":{\"body\":{\"references\":[{\"end\":63,\"field\":\"location\",\"renderedValue\":\"North Gate, Westbridge Campus\",\"sourceValue\":\"North Gate, Westbridge Campus\",\"start\":34},{\"end\":164,\"field\":\"timeZone\",\"renderedValue\":\"London (UTC+00:00)\",\"sourceValue\":\"London (UTC+00:00)\",\"start\":146},{\"end\":219,\"field\":\"audience\",\"renderedValue\":\"All students, faculty, staff, and campus visitors\",\"sourceValue\":\"All students, faculty, staff, and campus visitors\",\"start\":170},{\"end\":288,\"field\":\"contact\",\"renderedValue\":\"Campus Operations · operations@westbridge.example\",\"sourceValue\":\"Campus Operations · operations@westbridge.example\",\"start\":239}],\"text\":\"Action: [missing: action]\\nClosed: North Gate, Westbridge Campus\\nUse instead: [missing: alternativeLocation]\\nFrom: [missing: startTime]\\nTime zone: London (UTC+00:00)\\nFor: All students, faculty, staff, and campus visitors\\nContact / updates: Campus Operations · operations@westbridge.example\"},\"channel\":\"email\",\"title\":{\"references\":[{\"end\":18,\"field\":\"title\",\"renderedValue\":\"North Gate closure\",\"sourceValue\":\"North Gate closure\",\"start\":0}],\"text\":\"North Gate closure\"}},\"preview\":{\"body\":\"Action: [missing: action]\\nClosed: North Gate, Westbridge Campus\\nUse instead: [missing: alternativeLocation]\\nFrom: [miss…\",\"bodyVisibleEnd\":119,\"title\":\"North Gate closure\",\"titleVisibleEnd\":18,\"truncated\":true},\"representedCount\":5,\"status\":\"needs-attention\",\"warningCount\":0},\"push\":{\"coverage\":[{\"collapsedVisibility\":\"visible\",\"field\":\"title\",\"status\":\"represented\"},{\"collapsedVisibility\":\"hidden\",\"field\":\"audience\",\"status\":\"represented\"},{\"collapsedVisibility\":\"unavailable\",\"field\":\"action\",\"status\":\"source-missing\"},{\"collapsedVisibility\":\"unavailable\",\"field\":\"startTime\",\"status\":\"source-missing\"},{\"collapsedVisibility\":\"hidden\",\"field\":\"timeZone\",\"status\":\"represented\"},{\"collapsedVisibility\":\"hidden\",\"field\":\"contact\",\"status\":\"represented\"},{\"collapsedVisibility\":\"visible\",\"field\":\"location\",\"status\":\"represented\"},{\"collapsedVisibility\":\"unavailable\",\"field\":\"alternativeLocation\",\"status\":\"source-missing\"}],\"errorCount\":4,\"findings\":[{\"channel\":\"push\",\"explanation\":\"Announcement title must be represented by a complete, current semantic reference in the actual channel payload.\",\"field\":\"title\",\"id\":\"CH-PUSH-001-title\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.\",\"title\":\"Announcement title: represented\"},{\"channel\":\"push\",\"explanation\":\"Target audience must be represented by a complete, current semantic reference in the actual channel payload.\",\"field\":\"audience\",\"id\":\"CH-PUSH-001-audience\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.\",\"title\":\"Target audience: represented\"},{\"channel\":\"push\",\"explanation\":\"Required action is missing, a placeholder, or invalid in the source. A generated preview cannot repair it.\",\"field\":\"action\",\"id\":\"CH-PUSH-001-action\",\"severity\":\"error\",\"status\":\"failed\",\"suggestion\":\"Edit required action in the announcement lab, then recheck this channel.\",\"title\":\"Required action: fix the source\"},{\"channel\":\"push\",\"explanation\":\"Effective time is missing, a placeholder, or invalid in the source. A generated preview cannot repair it.\",\"field\":\"startTime\",\"id\":\"CH-PUSH-001-startTime\",\"severity\":\"error\",\"status\":\"failed\",\"suggestion\":\"Edit effective time in the announcement lab, then recheck this channel.\",\"title\":\"Effective time: fix the source\"},{\"channel\":\"push\",\"explanation\":\"Time zone must be represented by a complete, current semantic reference in the actual channel payload.\",\"field\":\"timeZone\",\"id\":\"CH-PUSH-001-timeZone\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.\",\"title\":\"Time zone: represented\"},{\"channel\":\"push\",\"explanation\":\"Contact or verification source must be represented by a complete, current semantic reference in the actual channel payload.\",\"field\":\"contact\",\"id\":\"CH-PUSH-001-contact\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.\",\"title\":\"Contact or verification source: represented\"},{\"channel\":\"push\",\"explanation\":\"Affected entrance / location must be represented by a complete, current semantic reference in the actual channel payload.\",\"field\":\"location\",\"id\":\"CH-PUSH-001-location\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.\",\"title\":\"Affected entrance / location: represented\"},{\"channel\":\"push\",\"explanation\":\"Alternative entrance is missing, a placeholder, or invalid in the source. A generated preview cannot repair it.\",\"field\":\"alternativeLocation\",\"id\":\"CH-PUSH-001-alternativeLocation\",\"severity\":\"error\",\"status\":\"failed\",\"suggestion\":\"Edit alternative entrance in the announcement lab, then recheck this channel.\",\"title\":\"Alternative entrance: fix the source\"},{\"channel\":\"push\",\"explanation\":\"Visible missing/invalid markers or TBD/TBC text need attention; placeholders never count as facts.\",\"id\":\"CH-PUSH-002\",\"severity\":\"error\",\"status\":\"failed\",\"suggestion\":\"Replace placeholders in the source fields; do not hide the marker in the channel template.\",\"title\":\"No visible placeholders\"},{\"channel\":\"push\",\"explanation\":\"A channel needs message content; email requires a subject and push requires a title.\",\"field\":\"title\",\"id\":\"CH-PUSH-003\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Add a source title and required details, then regenerate the channel.\",\"title\":\"Channel content is present\"},{\"channel\":\"push\",\"explanation\":\"Free-text additional context is intentionally excluded from all channel templates. It is not treated as a structured fact.\",\"field\":\"body\",\"id\":\"CH-PUSH-004\",\"severity\":\"informational\",\"status\":\"passed\",\"suggestion\":\"Review the source context yourself. Move essential details into the appropriate structured fields.\",\"title\":\"Additional context is excluded\"},{\"channel\":\"push\",\"explanation\":\"The generic card uses a code-point budget to approximate visibility. Expanded payload content can be present even when it is not visible in the collapsed card.\",\"id\":\"CH-PUSH-005\",\"severity\":\"warning\",\"status\":\"failed\",\"suggestion\":\"Inspect the expanded content and lead with the most urgent information. Device, font, settings, and OS behavior vary.\",\"title\":\"Collapsed card hides content\"},{\"channel\":\"push\",\"explanation\":\"A complete fact in the full payload is not necessarily fully visible in the collapsed notification.\",\"field\":\"title\",\"id\":\"CH-PUSH-006-title\",\"severity\":\"warning\",\"status\":\"passed\",\"suggestion\":\"Try a roomier generic preset or change the leading content. Verify how people can access full details on real devices.\",\"title\":\"Announcement title visible in collapsed card\"},{\"channel\":\"push\",\"explanation\":\"A complete fact in the full payload is not necessarily fully visible in the collapsed notification.\",\"field\":\"audience\",\"id\":\"CH-PUSH-006-audience\",\"severity\":\"warning\",\"status\":\"failed\",\"suggestion\":\"Try a roomier generic preset or change the leading content. Verify how people can access full details on real devices.\",\"title\":\"Target audience hidden in collapsed card\"},{\"channel\":\"push\",\"explanation\":\"A complete fact in the full payload is not necessarily fully visible in the collapsed notification.\",\"field\":\"timeZone\",\"id\":\"CH-PUSH-006-timeZone\",\"severity\":\"warning\",\"status\":\"failed\",\"suggestion\":\"Try a roomier generic preset or change the leading content. Verify how people can access full details on real devices.\",\"title\":\"Time zone hidden in collapsed card\"},{\"channel\":\"push\",\"explanation\":\"A complete fact in the full payload is not necessarily fully visible in the collapsed notification.\",\"field\":\"contact\",\"id\":\"CH-PUSH-006-contact\",\"severity\":\"warning\",\"status\":\"failed\",\"suggestion\":\"Try a roomier generic preset or change the leading content. Verify how people can access full details on real devices.\",\"title\":\"Contact or verification source hidden in collapsed card\"},{\"channel\":\"push\",\"explanation\":\"A complete fact in the full payload is not necessarily fully visible in the collapsed notification.\",\"field\":\"location\",\"id\":\"CH-PUSH-006-location\",\"severity\":\"warning\",\"status\":\"passed\",\"suggestion\":\"Try a roomier generic preset or change the leading content. Verify how people can access full details on real devices.\",\"title\":\"Affected entrance / location visible in collapsed card\"}],\"metrics\":{\"bodyCharacters\":288,\"titleCharacters\":18},\"overallStatus\":\"needs-attention\",\"payload\":{\"body\":{\"references\":[{\"end\":63,\"field\":\"location\",\"renderedValue\":\"North Gate, Westbridge Campus\",\"sourceValue\":\"North Gate, Westbridge Campus\",\"start\":34},{\"end\":164,\"field\":\"timeZone\",\"renderedValue\":\"London (UTC+00:00)\",\"sourceValue\":\"London (UTC+00:00)\",\"start\":146},{\"end\":219,\"field\":\"audience\",\"renderedValue\":\"All students, faculty, staff, and campus visitors\",\"sourceValue\":\"All students, faculty, staff, and campus visitors\",\"start\":170},{\"end\":288,\"field\":\"contact\",\"renderedValue\":\"Campus Operations · operations@westbridge.example\",\"sourceValue\":\"Campus Operations · operations@westbridge.example\",\"start\":239}],\"text\":\"Action: [missing: action]\\nClosed: North Gate, Westbridge Campus\\nUse instead: [missing: alternativeLocation]\\nFrom: [missing: startTime]\\nTime zone: London (UTC+00:00)\\nFor: All students, faculty, staff, and campus visitors\\nContact / updates: Campus Operations · operations@westbridge.example\"},\"channel\":\"push\",\"title\":{\"references\":[{\"end\":18,\"field\":\"title\",\"renderedValue\":\"North Gate closure\",\"sourceValue\":\"North Gate closure\",\"start\":0}],\"text\":\"North Gate closure\"}},\"preview\":{\"body\":\"Action: [missing: action]\\nClosed: North Gate, Westbridge Campus\\nUse instead: [missing: alternativeLocation]\\nF…\",\"bodyVisibleEnd\":109,\"title\":\"North Gate closure\",\"titleVisibleEnd\":18,\"truncated\":true},\"representedCount\":5,\"status\":\"needs-attention\",\"warningCount\":4},\"sms\":{\"coverage\":[{\"collapsedVisibility\":\"visible\",\"field\":\"title\",\"status\":\"represented\"},{\"collapsedVisibility\":\"visible\",\"field\":\"audience\",\"status\":\"represented\"},{\"collapsedVisibility\":\"unavailable\",\"field\":\"action\",\"status\":\"source-missing\"},{\"collapsedVisibility\":\"unavailable\",\"field\":\"startTime\",\"status\":\"source-missing\"},{\"collapsedVisibility\":\"visible\",\"field\":\"timeZone\",\"status\":\"represented\"},{\"collapsedVisibility\":\"visible\",\"field\":\"contact\",\"status\":\"represented\"},{\"collapsedVisibility\":\"visible\",\"field\":\"location\",\"status\":\"represented\"},{\"collapsedVisibility\":\"unavailable\",\"field\":\"alternativeLocation\",\"status\":\"source-missing\"}],\"errorCount\":4,\"findings\":[{\"channel\":\"sms\",\"explanation\":\"Announcement title must be represented by a complete, current semantic reference in the actual channel payload.\",\"field\":\"title\",\"id\":\"CH-SMS-001-title\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.\",\"title\":\"Announcement title: represented\"},{\"channel\":\"sms\",\"explanation\":\"Target audience must be represented by a complete, current semantic reference in the actual channel payload.\",\"field\":\"audience\",\"id\":\"CH-SMS-001-audience\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.\",\"title\":\"Target audience: represented\"},{\"channel\":\"sms\",\"explanation\":\"Required action is missing, a placeholder, or invalid in the source. A generated preview cannot repair it.\",\"field\":\"action\",\"id\":\"CH-SMS-001-action\",\"severity\":\"error\",\"status\":\"failed\",\"suggestion\":\"Edit required action in the announcement lab, then recheck this channel.\",\"title\":\"Required action: fix the source\"},{\"channel\":\"sms\",\"explanation\":\"Effective time is missing, a placeholder, or invalid in the source. A generated preview cannot repair it.\",\"field\":\"startTime\",\"id\":\"CH-SMS-001-startTime\",\"severity\":\"error\",\"status\":\"failed\",\"suggestion\":\"Edit effective time in the announcement lab, then recheck this channel.\",\"title\":\"Effective time: fix the source\"},{\"channel\":\"sms\",\"explanation\":\"Time zone must be represented by a complete, current semantic reference in the actual channel payload.\",\"field\":\"timeZone\",\"id\":\"CH-SMS-001-timeZone\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.\",\"title\":\"Time zone: represented\"},{\"channel\":\"sms\",\"explanation\":\"Contact or verification source must be represented by a complete, current semantic reference in the actual channel payload.\",\"field\":\"contact\",\"id\":\"CH-SMS-001-contact\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.\",\"title\":\"Contact or verification source: represented\"},{\"channel\":\"sms\",\"explanation\":\"Affected entrance / location must be represented by a complete, current semantic reference in the actual channel payload.\",\"field\":\"location\",\"id\":\"CH-SMS-001-location\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Restore the complete fact in the payload. Turn off a cutoff test or shorten the source wording without dropping essential information.\",\"title\":\"Affected entrance / location: represented\"},{\"channel\":\"sms\",\"explanation\":\"Alternative entrance is missing, a placeholder, or invalid in the source. A generated preview cannot repair it.\",\"field\":\"alternativeLocation\",\"id\":\"CH-SMS-001-alternativeLocation\",\"severity\":\"error\",\"status\":\"failed\",\"suggestion\":\"Edit alternative entrance in the announcement lab, then recheck this channel.\",\"title\":\"Alternative entrance: fix the source\"},{\"channel\":\"sms\",\"explanation\":\"Visible missing/invalid markers or TBD/TBC text need attention; placeholders never count as facts.\",\"id\":\"CH-SMS-002\",\"severity\":\"error\",\"status\":\"failed\",\"suggestion\":\"Replace placeholders in the source fields; do not hide the marker in the channel template.\",\"title\":\"No visible placeholders\"},{\"channel\":\"sms\",\"explanation\":\"A channel needs message content; email requires a subject and push requires a title.\",\"field\":\"title\",\"id\":\"CH-SMS-003\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Add a source title and required details, then regenerate the channel.\",\"title\":\"Channel content is present\"},{\"channel\":\"sms\",\"explanation\":\"Free-text additional context is intentionally excluded from all channel templates. It is not treated as a structured fact.\",\"field\":\"body\",\"id\":\"CH-SMS-004\",\"severity\":\"informational\",\"status\":\"passed\",\"suggestion\":\"Review the source context yourself. Move essential details into the appropriate structured fields.\",\"title\":\"Additional context is excluded\"},{\"channel\":\"sms\",\"explanation\":\"The current text is estimated at 5 SMS segments. Multipart messages are normally reassembled; they are not inherently truncated.\",\"id\":\"CH-SMS-005\",\"severity\":\"warning\",\"status\":\"failed\",\"suggestion\":\"Review length and cost with your provider. Keep the critical facts; use another channel if needed.\",\"title\":\"Multipart SMS\"},{\"channel\":\"sms\",\"explanation\":\"This lab flags messages above 6 estimated segments for review. This is a product review threshold, not a carrier delivery limit.\",\"id\":\"CH-SMS-006\",\"severity\":\"warning\",\"status\":\"passed\",\"suggestion\":\"Tighten the wording in the source or choose email for the full detail. Do not remove required facts.\",\"title\":\"Long SMS review threshold\"},{\"channel\":\"sms\",\"explanation\":\"At least one non-GSM character switches the whole message to a Unicode estimate using UTF-16 code units. Emoji can consume two or more units.\",\"id\":\"CH-SMS-007\",\"severity\":\"warning\",\"status\":\"failed\",\"suggestion\":\"Inspect non-GSM characters and choose simpler punctuation only when meaning is preserved. No automatic substitutions are made.\",\"title\":\"Unicode encoding\"},{\"channel\":\"sms\",\"explanation\":\"This is an intentional loss test, not normal multipart SMS behavior. Only the first transport segment is kept; later facts may be absent.\",\"id\":\"CH-SMS-008\",\"severity\":\"warning\",\"status\":\"passed\",\"suggestion\":\"Disable the cutoff to restore the full multipart payload. Inspect every omitted fact before using any shortened text.\",\"title\":\"Artificial first-segment cutoff\"}],\"metrics\":{\"bodyCharacters\":307,\"sms\":{\"characters\":307,\"encoding\":\"UCS-2 / UTF-16\",\"extensionCharacters\":6,\"multipartSegmentLimit\":67,\"nonGsmCharacters\":[\"·\"],\"segmentUnits\":[67,67,67,67,39],\"segments\":5,\"singleSegmentLimit\":70,\"unitLabel\":\"UTF-16 code units\",\"units\":307},\"titleCharacters\":0},\"overallStatus\":\"needs-attention\",\"payload\":{\"body\":{\"references\":[{\"end\":18,\"field\":\"title\",\"renderedValue\":\"North Gate closure\",\"sourceValue\":\"North Gate closure\",\"start\":0},{\"end\":82,\"field\":\"location\",\"renderedValue\":\"North Gate, Westbridge Campus\",\"sourceValue\":\"North Gate, Westbridge Campus\",\"start\":53},{\"end\":183,\"field\":\"timeZone\",\"renderedValue\":\"London (UTC+00:00)\",\"sourceValue\":\"London (UTC+00:00)\",\"start\":165},{\"end\":238,\"field\":\"audience\",\"renderedValue\":\"All students, faculty, staff, and campus visitors\",\"sourceValue\":\"All students, faculty, staff, and campus visitors\",\"start\":189},{\"end\":307,\"field\":\"contact\",\"renderedValue\":\"Campus Operations · operations@westbridge.example\",\"sourceValue\":\"Campus Operations · operations@westbridge.example\",\"start\":258}],\"text\":\"North Gate closure\\nAction: [missing: action]\\nClosed: North Gate, Westbridge Campus\\nUse instead: [missing: alternativeLocation]\\nFrom: [missing: startTime]\\nTime zone: London (UTC+00:00)\\nFor: All students, faculty, staff, and campus visitors\\nContact / updates: Campus Operations · operations@westbridge.example\"},\"channel\":\"sms\",\"title\":{\"references\":[],\"text\":\"\"}},\"preview\":{\"body\":\"North Gate closure\\nAction: [missing: action]\\nClosed: North Gate, Westbridge Campus\\nUse instead: [missing: alternativeLocation]\\nFrom: [missing: startTime]\\nTime zone: London (UTC+00:00)\\nFor: All students, faculty, staff, and campus visitors\\nContact / updates: Campus Operations · operations@westbridge.example\",\"bodyVisibleEnd\":307,\"title\":\"\",\"titleVisibleEnd\":0,\"truncated\":false},\"representedCount\":5,\"status\":\"needs-attention\",\"warningCount\":2}},\"draft\":{\"accessibleRoute\":\"\",\"action\":\"\",\"alternativeLocation\":\"\",\"audience\":\"All students, faculty, staff, and campus visitors\",\"body\":\"\",\"contact\":\"Campus Operations · operations@westbridge.example\",\"endTime\":\"\",\"eventName\":\"\",\"location\":\"North Gate, Westbridge Campus\",\"reason\":\"\",\"scenario\":\"closure\",\"serviceName\":\"\",\"startTime\":\"\",\"timeZone\":\"London (UTC+00:00)\",\"title\":\"North Gate closure\",\"workaround\":\"\"},\"options\":{\"pushOrder\":\"action-first\",\"pushPreset\":\"compact\",\"smsCutoff\":false},\"requiredFacts\":[{\"field\":\"title\",\"label\":\"Announcement title\",\"state\":\"valid\",\"value\":\"North Gate closure\"},{\"field\":\"audience\",\"label\":\"Target audience\",\"state\":\"valid\",\"value\":\"All students, faculty, staff, and campus visitors\"},{\"field\":\"action\",\"label\":\"Required action\",\"state\":\"missing\",\"value\":\"\"},{\"field\":\"startTime\",\"label\":\"Effective time\",\"state\":\"missing\",\"value\":\"\"},{\"field\":\"timeZone\",\"label\":\"Time zone\",\"state\":\"valid\",\"value\":\"London (UTC+00:00)\"},{\"field\":\"contact\",\"label\":\"Contact or verification source\",\"state\":\"valid\",\"value\":\"Campus Operations · operations@westbridge.example\"},{\"field\":\"location\",\"label\":\"Affected entrance / location\",\"state\":\"valid\",\"value\":\"North Gate, Westbridge Campus\"},{\"field\":\"alternativeLocation\",\"label\":\"Alternative entrance\",\"state\":\"missing\",\"value\":\"\"}],\"result\":{\"completedFields\":5,\"completeness\":63,\"errorCount\":3,\"finalAnnouncement\":\"North Gate closure\\n\\nFor: All students, faculty, staff, and campus visitors\\n\\nClosed entrance: North Gate, Westbridge Campus\\nAlternative entrance: [not specified]\\nEffective from: [not specified — valid date and time required] (London (UTC+00:00))\\n\\nWhat you need to do: [not specified]\\n\\nContact / updates: Campus Operations · operations@westbridge.example\",\"findings\":[{\"explanation\":\"The final announcement needs a title so readers can identify its purpose.\",\"field\":\"title\",\"id\":\"CORE-01\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Add a specific title that identifies the change.\",\"title\":\"A clear announcement title\"},{\"explanation\":\"Readers need to know whether this announcement applies to them.\",\"field\":\"audience\",\"id\":\"CORE-02\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Name the affected students, staff, visitors, or service users.\",\"title\":\"Target audience identified\"},{\"explanation\":\"This scenario requires an explicit action in the final announcement.\",\"field\":\"action\",\"id\":\"CORE-03\",\"severity\":\"error\",\"status\":\"failed\",\"suggestion\":\"Tell readers exactly what to do next, even if no action is needed.\",\"title\":\"A concrete next step\"},{\"explanation\":\"A valid date and time are required. Relative phrases such as “tomorrow” are ambiguous.\",\"field\":\"startTime\",\"id\":\"CORE-04\",\"severity\":\"error\",\"status\":\"failed\",\"suggestion\":\"Set the exact date and time this change takes effect.\",\"title\":\"An exact effective time\"},{\"explanation\":\"A clock time without a time zone can be interpreted differently by readers.\",\"field\":\"timeZone\",\"id\":\"CORE-05\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Specify the local time zone and UTC offset, for example London (UTC+00:00).\",\"title\":\"Time zone provided\"},{\"explanation\":\"Readers need a contact route or an update source. A name alone is insufficient.\",\"field\":\"contact\",\"id\":\"CORE-06\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Include an email address, phone number, or full https:// update URL.\",\"title\":\"A reachable verification source\"},{\"explanation\":\"If an end time is provided, it must be valid and later than the start, in the stated time zone.\",\"field\":\"endTime\",\"id\":\"CORE-07\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Use a valid end date and time later than the start, or leave the end blank if unknown.\",\"title\":\"Time range is consistent\"},{\"explanation\":\"The rules check structured facts. They cannot detect contradictions, misleading claims, or unclear language in additional context.\",\"field\":\"body\",\"id\":\"CORE-08\",\"severity\":\"warning\",\"status\":\"passed\",\"suggestion\":\"Review the context against every structured fact in the final preview, or remove redundant context.\",\"title\":\"Additional prose needs human review\"},{\"explanation\":\"The final preview is regenerated from the checked fields on every edit. Free-text context is separately marked for review.\",\"field\":\"title\",\"id\":\"CORE-09\",\"severity\":\"informational\",\"status\":\"passed\",\"suggestion\":\"Copy or download the generated final announcement, then obtain the appropriate human approval.\",\"title\":\"Structured facts included in final text\"},{\"explanation\":\"A closure must identify the entrance or location that is unavailable.\",\"field\":\"location\",\"id\":\"CLOSURE-01\",\"severity\":\"error\",\"status\":\"passed\",\"suggestion\":\"Name the closed entrance and campus or building.\",\"title\":\"Affected entrance identified\"},{\"explanation\":\"People need an explicit alternative route while the entrance is closed.\",\"field\":\"alternativeLocation\",\"id\":\"CLOSURE-02\",\"severity\":\"error\",\"status\":\"failed\",\"suggestion\":\"Add the alternative entrance and directions to reach it.\",\"title\":\"An alternative entrance\"},{\"explanation\":\"An alternative entrance is not automatically accessible. Readers may need step-free route information.\",\"field\":\"accessibleRoute\",\"id\":\"CLOSURE-03\",\"severity\":\"warning\",\"status\":\"failed\",\"suggestion\":\"Describe the step-free route, or give a contact for access assistance. Verify it on site.\",\"title\":\"Accessible route described\"},{\"explanation\":\"An end time helps readers plan their return. If it is unknown, the action should explain where to get updates.\",\"field\":\"endTime\",\"id\":\"CLOSURE-04\",\"severity\":\"warning\",\"status\":\"failed\",\"suggestion\":\"Add the expected reopening date and time when confirmed.\",\"title\":\"Closure end time provided\"}],\"passedCount\":8,\"requiredFields\":8,\"status\":\"needs-attention\",\"warningCount\":2},\"rulesetVersion\":\"source-1.0/channel-1.0/review-1.0\"}"
+    }
+  ],
+  "reviews": []
+}

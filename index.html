@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b0f14" />
+    <meta
+      name="description"
+      content="Before you send it, prove it works. An explainable pre-send testing lab for important announcements."
+    />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <meta
+      property="og:title"
+      content="SignalProof — Before you send it, prove it works."
+    />
+    <meta
+      property="og:description"
+      content="Local announcement checks, channel simulations and explicit human review. No sending or safety certification."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <title>SignalProof — Announcement Review Lab</title>
+  </head>
+  <body>
+    <noscript
+      >SignalProof needs JavaScript and a modern browser. Announcement checks
+      run locally; no messages are sent.</noscript
+    >
+    <div id="root"></div>
+    <script>
+      if (
+        !window.BigInt ||
+        !window.Intl ||
+        !window.HTMLDialogElement ||
+        !HTMLDialogElement.prototype.showModal
+      ) {
+        document.getElementById("root").textContent =
+          "SignalProof requires a current browser with BigInt, Intl and native dialog support. Please update Edge, Firefox or Safari. Existing browser records have not been deleted.";
+      }
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
